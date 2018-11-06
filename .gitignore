@@ -1,0 +1,9 @@
+*.ipynb_checkpoints
+__pycache__
+.vscode/
+predicts.csv
+output_*
+data
+logs
+tmp
+Pipfile.lock
