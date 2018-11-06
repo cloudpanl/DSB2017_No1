@@ -17,6 +17,9 @@ suanpan = {editable = true, path = "./../AiLab"}
 numpy = "*"
 opencv-python = "*"
 imageio = "*"
+simpleitk = "*"
+pyhive = {extras = ["hive"], version = "*"}
+"oss2" = "*"
 
 [dev-packages]
 pylint = "*"

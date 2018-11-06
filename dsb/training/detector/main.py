@@ -48,7 +48,7 @@ parser.add_argument('--test', default=0, type=int, metavar='TEST',
 parser.add_argument('--split', default=8, type=int, metavar='SPLIT',
                     help='In the test phase, split the image to 8 parts')
 parser.add_argument('--gpu', default='all', type=str, metavar='N',
-                    help='use gpu')
+                    help='use gpu, set to `none` to use CPU')
 parser.add_argument('--n_test', default=8, type=int, metavar='N',
                     help='number of gpu for test')
 
@@ -92,14 +92,17 @@ def main():
         pyfiles = [f for f in os.listdir('./') if f.endswith('.py')]
         for f in pyfiles:
             shutil.copy(f,os.path.join(save_dir,f))
-    # TODO: uncomment those two lines below to use GPU training.
-    # n_gpu = setgpu(args.gpu)
-    # args.n_gpu = n_gpu
-    net = net # TODO .cuda()
-    loss = loss # TODO .cuda()
-    # TODO: uncomment this line to use GPU 
-    # cudnn.benchmark = True
-    net = DataParallel(net)
+    if 'none' not in args.gpu.lower() and torch.cuda.is_available():
+        print('Use GPU for training.')
+        n_gpu = setgpu(args.gpu)
+        args.n_gpu = n_gpu
+        net = net.cuda()
+        loss = loss.cuda()
+        cudnn.benchmark = True
+        net = DataParallel(net)
+    else:
+        print('Use CPU for training.')
+        net = net.cpu()
     datadir = config_training['preprocess_result_path']
     
     if args.test == 1:
@@ -173,6 +176,8 @@ def main():
         validate(val_loader, net, loss)
 
 def train(data_loader, net, loss, epoch, optimizer, get_lr, save_freq, save_dir):
+    # Check if the net use GPU.
+    use_gpu = next(net.parameters()).is_cuda
     start_time = time.time()
     
     net.train()
@@ -182,21 +187,29 @@ def train(data_loader, net, loss, epoch, optimizer, get_lr, save_freq, save_dir)
 
     metrics = []
     for i, (data, target, coord) in enumerate(data_loader):
-        data = Variable(data) # TODO: Variable(data.cuda(async = True))
-        target = Variable(target) #TODO Variable(target.cuda(async = True))
-        coord = Variable(coord) # Variable(coord.cuda(async = True))
+        data = Variable(data)
+        target = Variable(target)
+        coord = Variable(coord)
+        if use_gpu:
+            data = data.cuda(async = True)
+            target = target.cuda(async = True)
+            coord = coord.cuda(async = True)
 
         output = net(data, coord)
-        loss_output = loss(output.cpu(), target) # TODO remove .cpu() to use GPU.
+        loss_output = loss(output, target)
+
         optimizer.zero_grad()
         loss_output[0].backward()
         optimizer.step()
 
-        loss_output[0] = loss_output[0].data[0]
+        loss_output[0] = loss_output[0].item()
         metrics.append(loss_output)
 
-    if epoch % args.save_freq == 0:            
-        state_dict = net.module.state_dict()
+    if epoch % args.save_freq == 0:
+        if isinstance(net, DataParallel):
+            state_dict = net.module.state_dict()
+        else:
+            state_dict = net.state_dict()
         for key in state_dict.keys():
             state_dict[key] = state_dict[key].cpu()
             
@@ -227,20 +240,26 @@ def train(data_loader, net, loss, epoch, optimizer, get_lr, save_freq, save_dir)
     print
 
 def validate(data_loader, net, loss):
+    # Check if the net use GPU.
+    use_gpu = next(net.parameters()).is_cuda
     start_time = time.time()
     
     net.eval()
 
     metrics = []
     for i, (data, target, coord) in enumerate(data_loader):
-        data = Variable(data, volatile = True) # TODO data.cuda(async = True)
-        target = Variable(target, volatile = True) # TODO: target.cuda(async = True)
-        coord = Variable(coord, volatile = True) # TODO: coord.cuda(async = True)
+        data = Variable(data, volatile = True) 
+        target = Variable(target, volatile = True) 
+        coord = Variable(coord, volatile = True)
+        if use_gpu:
+            data = data.cuda(async = True)
+            target = target.cuda(async = True)
+            coord = coord.cuda(async = True)
 
         output = net(data, coord)
-        loss_output = loss(output.cpu(), target, train = False) # TODO: remove .cpu() to use GPU.
+        loss_output = loss(output, target, train = False)
 
-        loss_output[0] = loss_output[0].data[0]
+        loss_output[0] = loss_output[0].item()
         metrics.append(loss_output)    
     end_time = time.time()
 
@@ -262,6 +281,8 @@ def validate(data_loader, net, loss):
     print
 
 def test(data_loader, net, get_pbb, save_dir, config):
+    # Check if the net use GPU.
+    use_gpu = next(net.parameters()).is_cuda
     start_time = time.time()
     save_dir = os.path.join(save_dir,'bbox')
     if not os.path.exists(save_dir):
@@ -291,8 +312,11 @@ def test(data_loader, net, get_pbb, save_dir, config):
         featurelist = []
 
         for i in range(len(splitlist)-1):
-            input = Variable(data[splitlist[i]:splitlist[i+1]], volatile = True) # TODO: .cuda()
-            inputcoord = Variable(coord[splitlist[i]:splitlist[i+1]], volatile = True) # TODO: .cuda()
+            input = Variable(data[splitlist[i]:splitlist[i+1]], volatile = True)
+            inputcoord = Variable(coord[splitlist[i]:splitlist[i+1]], volatile = True)
+            if use_gpu:
+                input = input.cuda()
+                inputcoord = inputcoord.cuda()
             if isfeat:
                 output,feature = net(input,inputcoord)
                 featurelist.append(feature.data.cpu().numpy())
@@ -325,10 +349,14 @@ def test(data_loader, net, get_pbb, save_dir, config):
     print
 
 def singletest(data,net,config,splitfun,combinefun,n_per_run,margin = 64,isfeat=False):
+    # Check if the net use GPU.
+    use_gpu = next(net.parameters()).is_cuda
     z, h, w = data.size(2), data.size(3), data.size(4)
     print(data.size())
     data = splitfun(data,config['max_stride'],margin)
-    data = Variable(data, volatile = True,requires_grad=False) # TODO: data.cuda(async = True)
+    data = Variable(data, volatile = True,requires_grad=False)
+    if use_gpu:
+        data = data.cuda()
     splitlist = range(0,args.split+1,n_per_run)
     outputlist = []
     featurelist = []

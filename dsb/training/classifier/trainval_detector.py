@@ -49,7 +49,7 @@ def train_nodulenet(data_loader, net, loss, epoch, optimizer, args):
         #torch.nn.utils.clip_grad_norm(net.parameters(), 1)
         optimizer.step()
 
-        loss_output[0] = loss_output[0].data[0]
+        loss_output[0] = loss_output[0].item()
         metrics.append(loss_output)
 
     end_time = time.time()
@@ -85,7 +85,7 @@ def validate_nodulenet(data_loader, net, loss):
         _,output = net(data, coord)
         loss_output = loss(output, target, train = False)
 
-        loss_output[0] = loss_output[0].data[0]
+        loss_output[0] = loss_output[0].item()
         metrics.append(loss_output)    
     end_time = time.time()
 

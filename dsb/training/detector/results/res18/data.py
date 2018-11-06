@@ -36,8 +36,8 @@ class DataBowl3Detector(Dataset):
         labels = []
         
         for idx in idcs:
-            # TODO Decode the npy file strings if necessary, py2 backward compatible.
-            if type(idx) is bytes or type(idx) is np.bytes_:
+            # Decode the npy file strings if necessary, py2 backward compatible.
+            if isinstance(idx, bytes):
                 idx = idx.decode()
             fname = os.path.join(data_dir, '{}_label.npy'.format(idx))
             if not os.path.isfile(fname):

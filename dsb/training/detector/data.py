@@ -5,7 +5,7 @@ import os
 import time
 import collections
 import random
-from layers import iou
+from .layers import iou
 from scipy.ndimage import zoom
 import warnings
 from scipy.ndimage.interpolation import rotate
@@ -36,8 +36,8 @@ class DataBowl3Detector(Dataset):
         labels = []
         
         for idx in idcs:
-            # TODO Decode the npy file strings if necessary, py2 backward compatible.
-            if type(idx) is bytes or type(idx) is np.bytes_:
+            # Decode the npy file strings if necessary, py2 backward compatible.
+            if isinstance(idx, bytes):
                 idx = idx.decode()
             fname = os.path.join(data_dir, '{}_label.npy'.format(idx))
             if not os.path.isfile(fname):

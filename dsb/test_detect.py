@@ -47,18 +47,19 @@ def test_detect(data_loader, net, get_pbb, save_dir, config,n_gpu):
         featurelist = []
         print('N-net runs on patches:', len(splitlist)-1)
         for i in range(len(splitlist)-1):
-            input = Variable(data[splitlist[i]:splitlist[i+1]], volatile = True) # TODO: no_grad() .cuda()
-            inputcoord = Variable(coord[splitlist[i]:splitlist[i+1]], volatile = True) # TODO .cuda()
-            # Convert Variables to cuda if the module use GPU.
-            if use_gpu:
-                input = input.cuda()
-                inputcoord = inputcoord.cuda()
-            if isfeat: # TODO: no enter.
-                output,feature = net(input,inputcoord)
-                featurelist.append(feature.data.cpu().numpy())
-            else:
-                output = net(input,inputcoord) # N-Net Predict
-            outputlist.append(output.data.cpu().numpy())
+            with torch.no_grad():
+                input = Variable(data[splitlist[i]:splitlist[i+1]])
+                inputcoord = Variable(coord[splitlist[i]:splitlist[i+1]])
+                # Convert Variables to cuda if the module use GPU.
+                if use_gpu:
+                    input = input.cuda()
+                    inputcoord = inputcoord.cuda()
+                if isfeat: # TODO: no enter.
+                    output,feature = net(input,inputcoord)
+                    featurelist.append(feature.data.cpu().numpy())
+                else:
+                    output = net(input,inputcoord) # N-Net Predict
+                outputlist.append(output.data.cpu().numpy())
         output = np.concatenate(outputlist,0)
         output = split_comber.combine(output,nzhw=nzhw)
         if isfeat: # TODO: no enter.
@@ -82,5 +83,5 @@ def test_detect(data_loader, net, get_pbb, save_dir, config,n_gpu):
 
 
     print('elapsed time is %3.2f seconds' % (end_time - start_time))
-    print
-    print
+    print()
+    print()

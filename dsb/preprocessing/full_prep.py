@@ -11,7 +11,6 @@ from multiprocessing import Pool
 from functools import partial
 from .step1 import step1_python
 import warnings
-import pandas as pd
 
 def process_mask(mask):
     convex_mask = np.copy(mask)
@@ -24,8 +23,8 @@ def process_mask(mask):
         else:
             mask2 = mask1
         convex_mask[i_layer] = mask2
-    struct = generate_binary_structure(3,1)
-    dilatedMask = binary_dilation(convex_mask,structure=struct,iterations=10)
+    struct = generate_binary_structure(3,1)  
+    dilatedMask = binary_dilation(convex_mask,structure=struct,iterations=10) 
     return dilatedMask
 
 # def savenpy(id):
@@ -60,7 +59,7 @@ def resample(imgs, spacing, new_spacing,order = 2):
     else:
         raise ValueError('wrong shape')
 
-def savenpy(id,filelist,prep_folder,data_path,use_existing=True):
+def savenpy(id,filelist,prep_folder,data_path,use_existing=True):      
     resolution = np.array([1,1,1])
     name = filelist[id]
     if use_existing:
@@ -70,7 +69,7 @@ def savenpy(id,filelist,prep_folder,data_path,use_existing=True):
     try:
         im, m1, m2, spacing = step1_python(os.path.join(data_path,name))
         Mask = m1+m2
-
+        
         newshape = np.round(np.array(Mask.shape)*spacing/resolution)
         xx,yy,zz= np.where(Mask)
         box = np.array([[np.min(xx),np.max(xx)],[np.min(yy),np.max(yy)],[np.min(zz),np.max(zz)]])
@@ -103,34 +102,27 @@ def savenpy(id,filelist,prep_folder,data_path,use_existing=True):
         sliceim = sliceim2[np.newaxis,...]
         np.save(os.path.join(prep_folder,name+'_clean'),sliceim)
         np.save(os.path.join(prep_folder,name+'_label'),np.array([[0,0,0,0]]))
-        print(name+' done')
-        return name
     except:
         print('bug in '+name)
-        # raise
+        raise
+    print(name+' done')
 
-
+    
 def full_prep(data_path,prep_folder,n_worker = None,use_existing=True):
     warnings.filterwarnings("ignore")
     if not os.path.exists(prep_folder):
         os.mkdir(prep_folder)
 
-
-    print('starting preprocessing')
+            
+    print('starting preprocessing')    
     pool = Pool(n_worker)
     filelist = [f for f in os.listdir(data_path)]
     partial_savenpy = partial(savenpy,filelist=filelist,prep_folder=prep_folder,
                               data_path=data_path,use_existing=use_existing)
 
     N = len(filelist)
-    patients = pool.map(partial_savenpy,range(N))
-    patients = [p for p in patients if p]
+    _=pool.map(partial_savenpy,range(N))
     pool.close()
     pool.join()
     print('end preprocessing')
-    get_npy_file = lambda p, t: "{}_{}.npy".format(p, t)
-    data = pd.DataFrame(
-        [(p, get_npy_file(p, "clean"), get_npy_file(p, "label")) for p in patients],
-        columns=["patient", "image", "label"]
-    )
-    return data
+    return filelist

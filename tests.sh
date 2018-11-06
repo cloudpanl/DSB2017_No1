@@ -20,3 +20,17 @@ python component_inference_3_mask.py \
 --inputBboxDataFolder "output_bbox" \
 --outputImageFolder "output_nodules" \
 --idColumn "patient"
+
+python component_train_1_preprocess.py \
+--dw-type "hive" \
+--dw-hive-host "47.94.82.175" \
+--dw-hive-port "10000" \
+--dw-hive-username "spark" \
+--storage-type 'oss' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-temp-store 'tmp' \
+--inputStage1Folder '../DSB2017_Data/DSB3/stage1_samples_2' \
+--inputLunaRawFolder '../DSB2017_Data/LUNA2016' \
+--inputLunaSegmentFolder '../DSB2017_Data/seg-lungs-LUNA16'

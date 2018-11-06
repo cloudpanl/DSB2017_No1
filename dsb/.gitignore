@@ -1,6 +1,7 @@
 *.pyc
-*.ipynb*
 training/.flag*
 prediction*.csv
 .idea/
 .vscode/
+.ipynb_checkpoints/
+training/detector/results/res18/*.ckpt

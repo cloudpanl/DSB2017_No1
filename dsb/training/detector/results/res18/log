@@ -3701,3 +3701,1244 @@ Train:      tpr 60.00, tnr 0.00, total pos 15, total neg 42, time 15.07
 loss 1.1902, classify loss 1.1902, regress loss 0.1464, 0.0433, 0.0806, 0.0423
 Validation: tpr 0.00, tnr 96.58262617, total pos 15, total neg 1465365, time 3.29
 loss 0.7819, classify loss 0.7819, regress loss 0.0065, 0.0133, 0.0086, 0.0538
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+batch_size: 1
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+Use GPU for training.
+using gpu 0
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+batch_size: 1
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+Epoch 001 (lr 0.00010)
+Train:      tpr 53.33, tnr 0.00, total pos 15, total neg 42, time 22.98
+loss 1.2366, classify loss 1.2366, regress loss 0.1291, 0.1007, 0.0402, 0.0789
+Validation: tpr 0.00, tnr 99.60454153, total pos 15, total neg 1464882, time 3.08
+loss 0.7943, classify loss 0.7943, regress loss 0.0106, 0.0140, 0.0126, 0.0554
+Use CPU for training.
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+batch_size: 1
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+Use GPU for training.
+using gpu 0
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+batch_size: 1
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+net.module Net(
+  (preBlock): Sequential(
+    (0): Conv3d(1, 24, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+    (1): BatchNorm3d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace)
+    (3): Conv3d(24, 24, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+    (4): BatchNorm3d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace)
+  )
+  (forw1): Sequential(
+    (0): PostRes(
+      (conv1): Conv3d(24, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv3d(24, 32, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+        (1): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): PostRes(
+      (conv1): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (forw2): Sequential(
+    (0): PostRes(
+      (conv1): Conv3d(32, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv3d(32, 64, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+        (1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): PostRes(
+      (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (forw3): Sequential(
+    (0): PostRes(
+      (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): PostRes(
+      (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (2): PostRes(
+      (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (forw4): Sequential(
+    (0): PostRes(
+      (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): PostRes(
+      (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (2): PostRes(
+      (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (back2): Sequential(
+    (0): PostRes(
+      (conv1): Conv3d(131, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv3d(131, 128, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+        (1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): PostRes(
+      (conv1): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (2): PostRes(
+      (conv1): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (back3): Sequential(
+    (0): PostRes(
+      (conv1): Conv3d(128, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv3d(128, 64, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+        (1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): PostRes(
+      (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (2): PostRes(
+      (conv1): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv2): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+      (bn2): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (maxpool1): MaxPool3d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (maxpool2): MaxPool3d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (maxpool3): MaxPool3d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (maxpool4): MaxPool3d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (unmaxpool1): MaxUnpool3d(kernel_size=(2, 2, 2), stride=(2, 2, 2), padding=(0, 0, 0))
+  (unmaxpool2): MaxUnpool3d(kernel_size=(2, 2, 2), stride=(2, 2, 2), padding=(0, 0, 0))
+  (path1): Sequential(
+    (0): ConvTranspose3d(64, 64, kernel_size=(2, 2, 2), stride=(2, 2, 2))
+    (1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace)
+  )
+  (path2): Sequential(
+    (0): ConvTranspose3d(64, 64, kernel_size=(2, 2, 2), stride=(2, 2, 2))
+    (1): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace)
+  )
+  (drop): Dropout3d(p=0.5)
+  (output): Sequential(
+    (0): Conv3d(128, 64, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+    (1): ReLU()
+    (2): Conv3d(64, 15, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+  )
+)
+Epoch 001 (lr 0.00010)
+Train:      tpr 46.67, tnr 0.00, total pos 15, total neg 42, time 22.37
+loss 1.4575, classify loss 1.4575, regress loss 0.1434, 0.1085, 0.1374, 0.1598
+Validation: tpr 0.00, tnr 99.98491222, total pos 15, total neg 1464762, time 3.09
+loss 0.7829, classify loss 0.7829, regress loss 0.0059, 0.0132, 0.0101, 0.0532
+Use GPU for training.
+using gpu 0
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+batch_size: 1
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+Epoch 001 (lr 0.00010)
+Train:      tpr 46.67, tnr 0.00, total pos 15, total neg 42, time 22.26
+loss 1.2163, classify loss 1.2163, regress loss 0.0832, 0.1241, 0.0710, 0.0681
+Validation: tpr 0.00, tnr 99.71669028, total pos 15, total neg 1464475, time 2.95
+loss 0.7894, classify loss 0.7894, regress loss 0.0066, 0.0087, 0.0106, 0.0538
+Use CPU for training.
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+batch_size: 1
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+Use GPU for training.
+using gpu 0
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+batch_size: 1
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+Use GPU for training.
+using gpu 0
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+batch_size: 1
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+Use GPU for training.
+using gpu 0
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+batch_size: 1
+F:\LargeFiles\lfz\prep_result\059d8c14b2256a2ba4e38ac511700203_label.npy
+F:\LargeFiles\lfz\prep_result\008464bb8521d09a42985dd8add3d0d2_label.npy
+F:\LargeFiles\lfz\prep_result\03fb0d0fdb187ee1160f09386b28c3f2_label.npy
+F:\LargeFiles\lfz\prep_result\028996723faa7840bb57f57e28275e4c_label.npy
+F:\LargeFiles\lfz\prep_result\059_label.npy
+F:\LargeFiles\lfz\prep_result\006b96310a37b36cccb2ab48d10b49a3_label.npy
+F:\LargeFiles\lfz\prep_result\04e5d435fa01b0958e3274be73312cac_label.npy
+F:\LargeFiles\lfz\prep_result\08528b8817429d12b7ce2bf444d264f9_label.npy
+F:\LargeFiles\lfz\prep_result\01f1140c8e951e2a921b61c9a7e782c2_label.npy
+F:\LargeFiles\lfz\prep_result\04a8c47583142181728056310759dea1_label.npy
+F:\LargeFiles\lfz\prep_result\080e6a00e69888fd620894f9fd0714b1_label.npy
+F:\LargeFiles\lfz\prep_result\04a52f49cdbfb8b99789b9e93f1ad319_label.npy
+F:\LargeFiles\lfz\prep_result\00edff4f51a893d80dae2d42a7f45ad1_label.npy
+F:\LargeFiles\lfz\prep_result\079_label.npy
+F:\LargeFiles\lfz\prep_result\0852f5124d69d7f8cd35fa31e1364d29_label.npy
+F:\LargeFiles\lfz\prep_result\03ff23e445787886f8b0cb192b3c154d_label.npy
+F:\LargeFiles\lfz\prep_result\0268f3a7a17412178cfb039e71799a80_label.npy
+F:\LargeFiles\lfz\prep_result\080_label.npy
+F:\LargeFiles\lfz\prep_result\00cba091fa4ad62cc3200a657aeb957e_label.npy
+F:\LargeFiles\lfz\prep_result\086f95a932c83faed289854083f48831_label.npy
+F:\LargeFiles\lfz\prep_result\024efb7a1e67dc820eb61cbdaa090166_label.npy
+F:\LargeFiles\lfz\prep_result\0257df465d9e4150adef13303433ff1e_label.npy
+F:\LargeFiles\lfz\prep_result\0092c13f9e00a3717fdc940641f00015_label.npy
+F:\LargeFiles\lfz\prep_result\064366faa1a83fdcb18b2538f1717290_label.npy
+F:\LargeFiles\lfz\prep_result\08643d7b9ce18405fb63f63dda258e76_label.npy
+F:\LargeFiles\lfz\prep_result\05609fdb8fa0895ac8a9be373144dac7_label.npy
+F:\LargeFiles\lfz\prep_result\003f41c78e6acfa92430a057ac0b306e_label.npy
+F:\LargeFiles\lfz\prep_result\0482c444ac838adc5aa00d1064c976c1_label.npy
+F:\LargeFiles\lfz\prep_result\04a3187ec2ed4198a25033071897bffc_label.npy
+F:\LargeFiles\lfz\prep_result\00986bebc45e12038ef0ce3e9962b51a_label.npy
+F:\LargeFiles\lfz\prep_result\04fca9fbec0b803326488ade96897f6e_label.npy
+F:\LargeFiles\lfz\prep_result\081f4a90f24ac33c14b61b97969b7f81_label.npy
+F:\LargeFiles\lfz\prep_result\07bca4290a2530091ce1d5f200d9d526_label.npy
+F:\LargeFiles\lfz\prep_result\043ed6cb6054cc13804a3dca342fa4d0_label.npy
+F:\LargeFiles\lfz\prep_result\07abb7bec548d1c0ccef088ce934e517_label.npy
+F:\LargeFiles\lfz\prep_result\01e349d34c06410e1da273add27be25c_label.npy
+F:\LargeFiles\lfz\prep_result\07349deeea878c723317a1ce42cc7e58_label.npy
+F:\LargeFiles\lfz\prep_result\0708c00f6117ed977bbe1b462b56848c_label.npy
+F:\LargeFiles\lfz\prep_result\01de8323fa065a8963533c4a86f2f6c1_label.npy
+F:\LargeFiles\lfz\prep_result\089b8f10743e449a0f64f8f311dd8a46_label.npy
+F:\LargeFiles\lfz\prep_result\012_label.npy
+F:\LargeFiles\lfz\prep_result\04cfc5efa4c8c2a8944c8b9fa6cb04d1_label.npy
+F:\LargeFiles\lfz\prep_result\026be5d5e652b6a7488669d884ebe297_label.npy
+F:\LargeFiles\lfz\prep_result\0030a160d58723ff36d73f41b170ec21_label.npy
+F:\LargeFiles\lfz\prep_result\025_label.npy
+F:\LargeFiles\lfz\prep_result\020_label.npy
+F:\LargeFiles\lfz\prep_result\0679e5fd67b7441b8094494033f3881f_label.npy
+F:\LargeFiles\lfz\prep_result\0700108170c91ea2219006e9484999ef_label.npy
+F:\LargeFiles\lfz\prep_result\0121c2845f2b7df060945b072b2515d7_label.npy
+F:\LargeFiles\lfz\prep_result\013395589c01aa01f8df81d80fb0e2b8_label.npy
+F:\LargeFiles\lfz\prep_result\0890a698c0a6ce5db48b1467011bf8d2_label.npy
+F:\LargeFiles\lfz\prep_result\05a20caf6ab6df4643644c953f06a5eb_label.npy
+F:\LargeFiles\lfz\prep_result\02801e3bbcc6966cb115a962012c35df_label.npy
+F:\LargeFiles\lfz\prep_result\0015ceb851d7251b8f399e39779d1e7d_label.npy
+F:\LargeFiles\lfz\prep_result\040_label.npy
+F:\LargeFiles\lfz\prep_result\0334c8242ce7ee1a6c1263096e4cc535_label.npy
+F:\LargeFiles\lfz\prep_result\07fdb853ff90ce3c6d5c91f619ed714e_label.npy
+Epoch 002 (lr 0.00010)
+Train:      tpr 60.00, tnr 0.00, total pos 15, total neg 42, time 22.11
+loss 1.0657, classify loss 1.0657, regress loss 0.0621, 0.0635, 0.0306, 0.1303
+Validation: tpr 13.33, tnr 47.54218009, total pos 15, total neg 1464672, time 3.02
+loss 0.8109, classify loss 0.8109, regress loss 0.0094, 0.0177, 0.0228, 0.0534

@@ -1,7 +1,7 @@
 import os
 import shutil
 import numpy as np
-from .config_training import config
+from config_training import config
 
 
 from scipy.io import loadmat
@@ -18,7 +18,8 @@ import pandas
 from multiprocessing import Pool
 from functools import partial
 import sys
-sys.path.append('../')
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../'))
+# preprocessing is located one dir above
 from preprocessing.step1 import step1_python
 import warnings
 
@@ -174,6 +175,9 @@ def full_prep(step1=True,step2 = True):
         alllabelfiles = config['stage1_annos_path']
         tmp = []
         for f in alllabelfiles:
+            # Turn the file path to absolute path if necessary.
+            if not os.path.isabs(f):
+                f = os.path.join(os.path.dirname(os.path.realpath(__file__)), f)
             content = np.array(pandas.read_csv(f))
             content = content[content[:,0]!=np.nan]
             tmp.append(content[:,:5])
@@ -404,7 +408,6 @@ def prepare_luna():
     
 if __name__=='__main__':
     # pre-process stage1
-    # TODO: uncomment.
     full_prep(step1=True,step2=True)
     # pre-process luna
     prepare_luna()
