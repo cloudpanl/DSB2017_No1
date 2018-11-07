@@ -2,24 +2,14 @@
 from __future__ import print_function
 
 import os
-from multiprocessing import freeze_support
 
 import cv2
-import pandas as pd
-import torch
-from torch.utils.data import DataLoader
 
-import dsb.net_detector as nodmodel
-from dsb import preprocessing
-from dsb.data_detector import DataBowl3Detector, collate
-
-# from suanpan.docker.arguments import File, Folder, HiveTable
-from dsb.layers import iou, nms
-from dsb.split_combine import SplitComb
-from dsb.test_detect import test_detect
-from suanpan import asyncio, convert, path, utils
-from suanpan.arguments import Bool, Int, String
-from suanpan.components import Component as dc
+from dsb.layers import nms
+from suanpan import convert, path, utils
+from suanpan.arguments import String
+from suanpan.docker import DockerComponent as dc
+from suanpan.docker.arguments import Folder, HiveTable
 
 BLUE = (255, 0, 0)
 GREEN = (0, 255, 0)
@@ -55,54 +45,50 @@ def pickWithPbb(image, pbb, maskFunc=rectangle, *arg, **kwargs):
 
 
 @dc.input(
-    String(
-        key="inputData",
-        # table="inputTable",
-        # partition="inputPartition",
-    )
+    HiveTable(key="inputData", table="inputDataTable", partition="inputDataPartition")
 )
 @dc.input(
-    String(
+    Folder(
         key="inputDataFolder",
         required=True,
         help="Directory to save preprocessed npy files to.",
     )
 )
 @dc.input(
-    String(
+    Folder(
         key="inputBboxDataFolder",
         required=True,
         help="Directory to save bbox npy files to.",
     )
 )
 @dc.output(
-    String(
-        key="outputImageFolder",
+    Folder(
+        key="outputImagesFolder",
         required=True,
         help="Directory to save masked image files to.",
     )
 )
 @dc.column(String(key="idColumn", default="id"))
-@dc.column(String(key="imageColumn", default="image"))
-@dc.column(String(key="pbbColumn", default="pbb"))
-def preprocess(context):
+@dc.column(String(key="dataColumn", default="data_path"))
+@dc.column(String(key="pbbColumn", default="pbb_path"))
+def SPData2MaskImages(context):
     args = context.args
-    data = pd.read_csv(args.inputData)
+    data = args.inputData
 
     for _, row in data.iterrows():
         image = utils.loadFromNpy(
-            os.path.join(args.inputDataFolder, row[args.imageColumn])
+            os.path.join(args.inputDataFolder, row[args.dataColumn])
         )
         pdd = utils.loadFromNpy(
             os.path.join(args.inputBboxDataFolder, row[args.pbbColumn])
         )
         images = [img for img in pickWithPbb(image, pdd)]
-        utils.saveImages(
-            os.path.join(args.outputImageFolder, row[args.idColumn]), images
+        utils.saveAsImages(
+            os.path.join(args.outputImagesFolder, row[args.idColumn]), images
         )
 
-    return args.outputImageFolder
+    return args.outputImagesFolder
 
 
 if __name__ == "__main__":
-    preprocess()  # pylint: disable=no-value-for-parameter
+    SPData2MaskImages()  # pylint: disable=no-value-for-parameter

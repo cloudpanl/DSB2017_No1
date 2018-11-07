@@ -18,11 +18,10 @@ from skimage.morphology import convex_hull_image
 from dsb import preprocessing
 from dsb.preprocessing.step1 import step1_python
 from suanpan import asyncio
-from suanpan.arguments import Bool, Int, String
+from suanpan.arguments import String
 from suanpan.docker import DockerComponent as dc
+from suanpan.docker.arguments import Csv, Folder, HiveTable
 from suanpan.docker.io import storage
-
-# from suanpan.docker.arguments import Folder, HiveTable
 
 
 def resample(imgs, spacing, new_spacing, order=2):
@@ -448,62 +447,58 @@ def scan_prep_results(folder):
 
 
 @dc.input(
-    String(
-        key="inputLunaRawFolder",
+    Folder(
+        key="inputRawFolder", required=True, help="Luna raw or similar directory path."
+    )
+)
+@dc.input(
+    Folder(
+        key="inputSegmentFolder",
         required=True,
-        help="Luna raw or similar directory path.",
+        help="Luna segment or similar directory path.",
     )
 )
-@dc.input(
-    String(key="inputLunaSegmentFolder", required=True, help="Luna segment or similar directory path.")
-)
-@dc.input(
-    String(key="inputLunaAbbr", required=True, help="Luna abbr path.")
-)
-@dc.input(
-    String(key="inputLunaLabel", required=True, help="Luna label path.")
-)
+@dc.input(Csv(key="inputAbbr", required=True, help="Luna abbr path."))
+@dc.input(Csv(key="inputLabels", required=True, help="Luna label path."))
 @dc.output(
-    String(
-        key="outputData",
-        # table="outputTable",
-        # partition="outputPartition",
+    HiveTable(
+        key="outputData", table="outputDataTable", partition="outputDataPartition"
     )
 )
 @dc.output(
-    String(
+    Folder(
         key="outputDataFolder",
         required=True,
         help="Directory to save preprocessed npy files to.",
     )
 )
-@dc.param(
-    Int(
-        key="workers",
-        default=asyncio.WORKERS,
-        help="Number of workers for multi-processing.",
-    )
-)
+@dc.output(String(key="idColumn", default="patient"))
+@dc.output(String(key="imageColumn", default="image_path"))
+@dc.output(String(key="labelColumn", default="label_path"))
 def SPLunaPreprocess(context):
     args = context.args
 
-    lunaRawPath = args.inputLunaRawFolder
-    lunaSegmentPath = args.inputLunaSegmentFolder
+    lunaRawPath = args.inputRawFolder
+    lunaSegmentPath = args.inputSegmentFolder
     preprocessResultPath = args.outputDataFolder
-    lunaAbbrPath = args.inputLunaAbbr
-    lunaLabelPath = args.inputLunaLabel
+    lunaAbbrPath = args.inputAbbr
+    lunaLabelsPath = args.inputLabels
 
     lunaDataPath = storage.getPathInTempStore("luna_data_{}".format(time.time()))
 
     prepare_luna(lunaRawPath, lunaAbbrPath, lunaDataPath, lunaSegmentPath)
     preprocess_luna(
-        lunaSegmentPath, preprocessResultPath, lunaDataPath, lunaLabelPath, args.workers
+        lunaSegmentPath,
+        preprocessResultPath,
+        lunaDataPath,
+        lunaLabelsPath,
+        asyncio.WORKERS,
     )
-    data = scan_prep_results(preprocessResultPath)
+    data = scan_prep_results(
+        preprocessResultPath, args.idColumn, args.imageColumn, args.labelColumn
+    )
 
-    data.to_csv(args.outputData)
-
-    return data, args.outputDataFolder
+    return data, preprocessResultPath
 
 
 if __name__ == "__main__":

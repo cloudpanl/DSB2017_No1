@@ -1,27 +1,7 @@
 set -xe
 
-python component_inference_1_preprocess.py \
---inputDataFolder "../DSB2017_Data/DSB3/stage1_samples" \
---outputDataFolder "output_data" \
---outputImagesFolder "output_images" \
---outputData "data/data_1.csv"
-
-python component_inference_2_n_net.py \
---inputData "data/data_1.csv" \
---inputDataFolder "output_data" \
---inputModel "dsb/model/detector.ckpt" \
---outputBboxData "data/data_2.csv" \
---outputBboxFolder "output_bbox" \
---idColumn "patient"
-
-python component_inference_3_mask.py \
---inputData "data/data_2.csv" \
---inputDataFolder "output_data" \
---inputBboxDataFolder "output_bbox" \
---outputImageFolder "output_nodules" \
---idColumn "patient"
-
-python component_train_1_preprocess.py \
+pipenv run \
+python component_dsb3_preprocess.py \
 --dw-type "hive" \
 --dw-hive-host "47.94.82.175" \
 --dw-hive-port "10000" \
@@ -31,6 +11,111 @@ python component_train_1_preprocess.py \
 --storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
 --storage-oss-bucket-name 'suanpan' \
 --storage-oss-temp-store 'tmp' \
---inputStage1Folder '../DSB2017_Data/DSB3/stage1_samples_2' \
---inputLunaRawFolder '../DSB2017_Data/LUNA2016' \
---inputLunaSegmentFolder '../DSB2017_Data/seg-lungs-LUNA16'
+--inputDataFolder "majik_test/DSB2017_Data/DSB3/stage1_samples_2" \
+--inputLabelsFolder "majik_test/DSB2017_Data/DSB3/stage1_annos" \
+--outputDataTable "component_dsb3_preprocess_output_table" \
+--outputDataFolder "majik_test/component_dsb3_preprocess_output_data"
+
+pipenv run \
+python component_luna_preprocess.py \
+--dw-type "hive" \
+--dw-hive-host "47.94.82.175" \
+--dw-hive-port "10000" \
+--dw-hive-username "spark" \
+--storage-type 'oss' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-temp-store 'tmp' \
+--inputRawFolder "majik_test/DSB2017_Data/LUNA2016" \
+--inputSegmentFolder "majik_test/DSB2017_Data/LUNA2016/seg-lungs-LUNA16" \
+--inputAbbr "majik_test/DSB2017_Data/LUNA2016/labels/shorter" \
+--inputLabels "majik_test/DSB2017_Data/LUNA2016/labels/lunaqualified" \
+--outputDataTable "component_luna_preprocess_output_data" \
+--outputDataFolder "majik_test/component_luna_preprocess_output_data"
+
+pipenv run \
+python component_folder_combine.py \
+--dw-type "hive" \
+--dw-hive-host "47.94.82.175" \
+--dw-hive-port "10000" \
+--dw-hive-username "spark" \
+--storage-type 'oss' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-temp-store 'tmp' \
+--inputFolder1 "majik_test/component_dsb3_preprocess_output_data" \
+--inputFolder2 "majik_test/component_luna_preprocess_output_data" \
+--outputFolder "majik_test/component_folder_combine_output_data"
+
+pipenv run \
+python component_n_net_train.py \
+--dw-type "hive" \
+--dw-hive-host "47.94.82.175" \
+--dw-hive-port "10000" \
+--dw-hive-username "spark" \
+--storage-type 'oss' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-temp-store 'tmp' \
+--inputTrainDataTable "component_dsb3_preprocess_output_table" \
+--inputValidateDataTable "component_luna_preprocess_output_data" \
+--inputDataFolder "majik_test/component_folder_combine_output_data" \
+--outputCheckpoint "majik_test/component_n_net_train_output_checkpoint" \
+--idColumn "patient"
+
+pipenv run \
+python component_n_net_predict.py \
+--dw-type "hive" \
+--dw-hive-host "47.94.82.175" \
+--dw-hive-port "10000" \
+--dw-hive-username "spark" \
+--storage-type 'oss' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-temp-store 'tmp' \
+--inputDataTable "component_dsb3_preprocess_output_table" \
+--inputDataFolder "majik_test/component_folder_combine_output_data" \
+--inputCheckpoint "majik_test/component_n_net_predict_input_checkpoint/detector" \
+--outputBboxDataTable "component_n_net_predict_output_bbox_data" \
+--outputBboxFolder "majik_test/component_n_net_predict_output_bbox_data" \
+--idColumn "patient"
+
+pipenv run \
+python component_data_to_images.py \
+--dw-type "hive" \
+--dw-hive-host "47.94.82.175" \
+--dw-hive-port "10000" \
+--dw-hive-username "spark" \
+--storage-type 'oss' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-temp-store 'tmp' \
+--inputDataTable "component_dsb3_preprocess_output_table" \
+--inputDataFolder "majik_test/component_folder_combine_output_data" \
+--outputImagesFolder "majik_test/component_data_to_image_output_images" \
+--idColumn "patient" \
+--dataColumn "image_path"
+
+pipenv run \
+python component_data_to_mask_images.py \
+--dw-type "hive" \
+--dw-hive-host "47.94.82.175" \
+--dw-hive-port "10000" \
+--dw-hive-username "spark" \
+--storage-type 'oss' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-temp-store 'tmp' \
+--inputDataTable "component_n_net_predict_output_bbox_data" \
+--inputDataFolder "majik_test/component_folder_combine_output_data" \
+--inputBboxDataFolder "majik_test/component_n_net_predict_output_bbox_data" \
+--outputImagesFolder "majik_test/component_data_to_mask_images_output_images" \
+--idColumn "patient" \
+--dataColumn "image_path" \
+--pbbColumn "pbb"

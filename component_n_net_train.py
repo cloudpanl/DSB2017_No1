@@ -17,10 +17,9 @@ import dsb.training.detector.data as data
 import dsb.training.detector.res18 as model
 from dsb.training.detector.utils import *
 from suanpan import asyncio
-from suanpan.arguments import Bool, Float, Int, String
+from suanpan.arguments import Float, Int, String
 from suanpan.docker import DockerComponent as dc
-
-# from suanpan.docker.arguments import Folder, HiveTable
+from suanpan.docker.arguments import Checkpoint, Folder, HiveTable
 
 
 def getLearningRate(epoch, epochs, lr):
@@ -152,24 +151,28 @@ def save(path, net, **kwargs):
 
 
 @dc.input(
-    String(
-        key="inputData",
-        # table="inputTable",
-        # partition="inputPartition",
+    HiveTable(
+        key="inputTrainData",
+        table="inputTrainDataTable",
+        partition="inputTrainDataPartition",
     )
 )
-@dc.input(String(key="inputDataFolder", required=True))
-@dc.input(String(key="inputCheckpoint"))
-@dc.input(String(key="inputTrainData", required=True))
-@dc.input(String(key="inputValidateData", required=True))
-@dc.output(String(key="outputCheckpoint", required=True))
-@dc.param(String(key="idColumn", defualt="id"))
-@dc.param(Int(key="workers", defualt=asyncio.WORKERS))
-@dc.param(Int(key="epochs", defualt=100))
-@dc.param(Int(key="batchSize", defualt=16))
-@dc.param(Float(key="learningRate", defualt=0.01))
-@dc.param(Float(key="momentum", defualt=0.9))
-@dc.param(Float(key="weightDecay", defualt=1e-4))
+@dc.input(
+    HiveTable(
+        key="inputValidateData",
+        table="inputValidateDataTable",
+        partition="inputValidateDataPartition",
+    )
+)
+@dc.input(Folder(key="inputDataFolder", required=True))
+@dc.input(Checkpoint(key="inputCheckpoint"))
+@dc.output(Checkpoint(key="outputCheckpoint", required=True))
+@dc.param(String(key="idColumn", default="id"))
+@dc.param(Int(key="epochs", default=100))
+@dc.param(Int(key="batchSize", default=16))
+@dc.param(Float(key="learningRate", default=0.01))
+@dc.param(Float(key="momentum", default=0.9))
+@dc.param(Float(key="weightDecay", default=1e-4))
 @dc.param(Int(key="gpu"))
 def SPNNetTrain(context):
     torch.manual_seed(0)
@@ -181,14 +184,14 @@ def SPNNetTrain(context):
     checkoutPointPath = args.inputCheckpoint
     trainIds = args.inputTrainData[args.idColumn]
     validateIds = args.inputValidateData[args.idColumn]
-    workers = args.workers
+    workers = asyncio.WORKERS
     epochs = args.epochs
     batchSize = args.batchSize
     learningRate = args.learningRate
     momentum = args.momentum
     weightDecay = args.weightDecay
     gpu = args.gpu
-    useGpu = gpu is not None and not torch.cuda.is_available()
+    useGpu = gpu is not None and torch.cuda.is_available()
 
     if useGpu:
         torch.cuda.set_device(0)
@@ -224,7 +227,7 @@ def SPNNetTrain(context):
     )
 
     # Validation sets
-    dataset = data.DataBowl3Detector(dataFolder, validateIds, config, phase="validate")
+    dataset = data.DataBowl3Detector(dataFolder, validateIds, config, phase="val")
     valLoader = DataLoader(
         dataset,
         batch_size=batchSize,

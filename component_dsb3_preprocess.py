@@ -13,11 +13,10 @@ from scipy.ndimage.morphology import binary_dilation, generate_binary_structure
 from skimage.morphology import convex_hull_image
 
 from dsb.preprocessing.step1 import step1_python
-from suanpan import asyncio, utils
-from suanpan.arguments import Bool, Int, String
+from suanpan import asyncio
+from suanpan.arguments import String
 from suanpan.docker import DockerComponent as dc
-
-# from suanpan.docker.arguments import Folder, HiveTable
+from suanpan.docker.arguments import Folder, HiveTable
 
 
 def resample(imgs, spacing, new_spacing, order=2):
@@ -205,7 +204,7 @@ def full_prep(
     print("end preprocessing")
 
 
-def scan_prep_results(folder):
+def scan_prep_results(folder, id_column, image_column, label_column):
     data_suffix = "_clean.npy"
     label_suffix = "_label.npy"
     return pd.DataFrame(
@@ -214,45 +213,39 @@ def scan_prep_results(folder):
             for file in os.listdir(folder)
             if file.endswith(data_suffix)
         ],
-        columns=["patient", "image_path", "label_path"],
+        columns=[id_column, image_column, label_column],
     )
 
 
 @dc.input(
-    String(
+    Folder(
         key="inputDataFolder",
         required=True,
         help="DSB stage1/2 or similar directory path.",
     )
 )
 @dc.input(
-    String(
+    Folder(
         key="inputLabelsFolder",
         required=True,
         help="DSB stage1/2 annos or similar directory path.",
     )
 )
 @dc.output(
-    String(
-        key="outputData",
-        # table="outputTable",
-        # partition="outputPartition",
+    HiveTable(
+        key="outputData", table="outputDataTable", partition="outputDataPartition"
     )
 )
 @dc.output(
-    String(
+    Folder(
         key="outputDataFolder",
         required=True,
         help="Directory to save preprocessed npy files to.",
     )
 )
-@dc.param(
-    Int(
-        key="workers",
-        default=asyncio.WORKERS,
-        help="Number of workers for multi-processing.",
-    )
-)
+@dc.output(String(key="idColumn", default="patient"))
+@dc.output(String(key="imageColumn", default="image_path"))
+@dc.output(String(key="labelColumn", default="label_path"))
 def SPDSB3Preprocess(context):
     args = context.args
 
@@ -260,10 +253,12 @@ def SPDSB3Preprocess(context):
     preprocessResultPath = args.outputDataFolder
     stage1AnnosPath = args.inputLabelsFolder
 
-    full_prep(preprocessResultPath, stage1Path, stage1AnnosPath, workers=args.workers)
-    data = scan_prep_results(preprocessResultPath)
-
-    data.to_csv(args.outputData)
+    full_prep(
+        preprocessResultPath, stage1Path, stage1AnnosPath, workers=asyncio.WORKERS
+    )
+    data = scan_prep_results(
+        preprocessResultPath, args.idColumn, args.imageColumn, args.labelColumn
+    )
 
     return data, args.outputDataFolder
 
