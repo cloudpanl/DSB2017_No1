@@ -433,7 +433,7 @@ def prepare_luna(luna_raw, luna_abbr, luna_data, luna_segment, force=False):
     print("end changing luna name")
 
 
-def scan_prep_results(folder):
+def scan_prep_results(folder, id_column, image_column, label_column):
     data_suffix = "_clean.npy"
     label_suffix = "_label.npy"
     return pd.DataFrame(
@@ -442,7 +442,7 @@ def scan_prep_results(folder):
             for file in os.listdir(folder)
             if file.endswith(data_suffix)
         ],
-        columns=["patient", "image_path", "label_path"],
+        columns=[id_column, image_column, label_column],
     )
 
 

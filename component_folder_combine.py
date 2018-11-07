@@ -10,7 +10,7 @@ from suanpan.docker.arguments import Folder
 @dc.input(Folder(key="inputFolder1", required=True))
 @dc.input(Folder(key="inputFolder2", required=True))
 @dc.output(Folder(key="outputFolder", required=True))
-@dc.param(String(key="mode", default="replace"))
+# @dc.param(String(key="mode", default="replace"))
 def SPFolderCombine(context):
     args = context.args
 

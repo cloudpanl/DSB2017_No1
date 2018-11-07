@@ -167,7 +167,7 @@ def save(path, net, **kwargs):
 @dc.input(Folder(key="inputDataFolder", required=True))
 @dc.input(Checkpoint(key="inputCheckpoint"))
 @dc.output(Checkpoint(key="outputCheckpoint", required=True))
-@dc.param(String(key="idColumn", default="id"))
+@dc.column(String(key="idColumn", default="id"))
 @dc.param(Int(key="epochs", default=100))
 @dc.param(Int(key="batchSize", default=16))
 @dc.param(Float(key="learningRate", default=0.01))
