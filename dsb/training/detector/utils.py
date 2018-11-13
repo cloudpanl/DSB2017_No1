@@ -3,7 +3,7 @@ import os
 import numpy as np
 import torch
 def getFreeId():
-    import pynvml 
+    import pynvml
 
     pynvml.nvmlInit()
     def getFreeRatio(id):
@@ -30,7 +30,7 @@ def setgpu(gpuinput):
     else:
         gpus = gpuinput
         if any([g not in freeids for g in gpus.split(',')]):
-            raise ValueError('gpu'+g+'is being used')
+            raise ValueError('gpu'+gpuinput+'is being used')
     print('using gpu '+gpus)
     os.environ['CUDA_VISIBLE_DEVICES']=gpus
     return len(gpus.split(','))
@@ -42,13 +42,13 @@ class Logger(object):
 
     def write(self, message):
         self.terminal.write(message)
-        self.log.write(message)  
+        self.log.write(message)
 
     def flush(self):
         #this flush method is needed for python 3 compatibility.
         #this handles the flush command by doing nothing.
         #you might want to specify some extra behavior here.
-        pass    
+        pass
 
 
 def split4(data,  max_stride, margin):
@@ -67,14 +67,14 @@ def split4(data,  max_stride, margin):
     splits.append(data[:, :, :, :h_width, -w_width:])
     splits.append(data[:, :, :, -h_width:, :w_width])
     splits.append(data[:, :, :, -h_width:, -w_width:])
-    
+
     return torch.cat(splits, 0)
 
 def combine4(output, h, w):
     splits = []
     for i in range(len(output)):
         splits.append(output[i])
- 
+
     output = np.zeros((
         splits[0].shape[0],
         h,
@@ -107,7 +107,7 @@ def split8(data,  max_stride, margin):
         c, z, h, w = data.shape
     else:
         _,c, z, h, w = data.size()
-    
+
     z_width = np.ceil(float(z / 2 + margin)/max_stride).astype('int')*max_stride
     w_width = np.ceil(float(w / 2 + margin)/max_stride).astype('int')*max_stride
     h_width = np.ceil(float(h / 2 + margin)/max_stride).astype('int')*max_stride
@@ -119,19 +119,19 @@ def split8(data,  max_stride, margin):
                 else:
                     splits.append(data[:, :, zz[0]:zz[1], hh[0]:hh[1], ww[0]:ww[1]])
 
-                
+
     if isinstance(data, np.ndarray):
         return np.concatenate(splits, 0)
     else:
         return torch.cat(splits, 0)
 
-    
+
 
 def combine8(output, z, h, w):
     splits = []
     for i in range(len(output)):
         splits.append(output[i])
- 
+
     output = np.zeros((
         z,
         h,
@@ -139,7 +139,7 @@ def combine8(output, z, h, w):
         splits[0].shape[3],
         splits[0].shape[4]), np.float32)
 
-    
+
     z_width = z / 2
     h_width = h / 2
     w_width = w / 2
@@ -149,14 +149,14 @@ def combine8(output, z, h, w):
             for ww in [[0,w_width],[w_width-w,None]]:
                 output[zz[0]:zz[1], hh[0]:hh[1], ww[0]:ww[1], :, :] = splits[i][zz[0]:zz[1], hh[0]:hh[1], ww[0]:ww[1], :, :]
                 i = i+1
-                
+
     return output
 
 
 def split16(data,  max_stride, margin):
     splits = []
     _,c, z, h, w = data.size()
-    
+
     z_width = np.ceil(float(z / 4 + margin)/max_stride).astype('int')*max_stride
     z_pos = [z*3/8-z_width/2,
              z*5/8-z_width/2]
@@ -166,14 +166,14 @@ def split16(data,  max_stride, margin):
         for hh in [[0,h_width],[-h_width,None]]:
             for ww in [[0,w_width],[-w_width,None]]:
                 splits.append(data[:, :, zz[0]:zz[1], hh[0]:hh[1], ww[0]:ww[1]])
-    
+
     return torch.cat(splits, 0)
 
 def combine16(output, z, h, w):
     splits = []
     for i in range(len(output)):
         splits.append(output[i])
- 
+
     output = np.zeros((
         z,
         h,
@@ -181,7 +181,7 @@ def combine16(output, z, h, w):
         splits[0].shape[3],
         splits[0].shape[4]), np.float32)
 
-    
+
     z_width = z / 4
     h_width = h / 2
     w_width = w / 2
@@ -195,17 +195,17 @@ def combine16(output, z, h, w):
             for ww in [[0,w_width],[w_width-w,None]]:
                 output[zz[0]:zz[1], hh[0]:hh[1], ww[0]:ww[1], :, :] = splits[i][zz2[0]:zz2[1], hh[0]:hh[1], ww[0]:ww[1], :, :]
                 i = i+1
-                
+
     return output
 
 def split32(data,  max_stride, margin):
     splits = []
     _,c, z, h, w = data.size()
-    
+
     z_width = np.ceil(float(z / 2 + margin)/max_stride).astype('int')*max_stride
     w_width = np.ceil(float(w / 4 + margin)/max_stride).astype('int')*max_stride
     h_width = np.ceil(float(h / 4 + margin)/max_stride).astype('int')*max_stride
-    
+
     w_pos = [w*3/8-w_width/2,
              w*5/8-w_width/2]
     h_pos = [h*3/8-h_width/2,
@@ -215,11 +215,11 @@ def split32(data,  max_stride, margin):
         for hh in [[0,h_width],[h_pos[0],h_pos[0]+h_width],[h_pos[1],h_pos[1]+h_width],[-h_width,None]]:
             for ww in [[0,w_width],[w_pos[0],w_pos[0]+w_width],[w_pos[1],w_pos[1]+w_width],[-w_width,None]]:
                 splits.append(data[:, :, zz[0]:zz[1], hh[0]:hh[1], ww[0]:ww[1]])
-    
+
     return torch.cat(splits, 0)
 
 def combine32(splits, z, h, w):
- 
+
     output = np.zeros((
         z,
         h,
@@ -227,25 +227,25 @@ def combine32(splits, z, h, w):
         splits[0].shape[3],
         splits[0].shape[4]), np.float32)
 
-    
+
     z_width = int(np.ceil(float(z) / 2))
     h_width = int(np.ceil(float(h) / 4))
     w_width = int(np.ceil(float(w) / 4))
     splithstart = splits[0].shape[1]/2-h_width/2
     splitwstart = splits[0].shape[2]/2-w_width/2
-    
+
     i = 0
     for zz in [[0,z_width],[z_width-z,None]]:
-        
+
         for hh,hh2 in zip([[0,h_width],[h_width,h_width*2],[h_width*2,h_width*3],[h_width*3-h,None]],
                           [[0,h_width],[splithstart,h_width+splithstart],[splithstart,h_width+splithstart],[h_width*3-h,None]]):
-            
+
             for ww,ww2 in zip([[0,w_width],[w_width,w_width*2],[w_width*2,w_width*3],[w_width*3-w,None]],
                               [[0,w_width],[splitwstart,w_width+splitwstart],[splitwstart,w_width+splitwstart],[w_width*3-w,None]]):
-                
+
                 output[zz[0]:zz[1], hh[0]:hh[1], ww[0]:ww[1], :, :] = splits[i][zz[0]:zz[1], hh2[0]:hh2[1], ww2[0]:ww2[1], :, :]
                 i = i+1
-                
+
     return output
 
 
@@ -253,11 +253,11 @@ def combine32(splits, z, h, w):
 def split64(data,  max_stride, margin):
     splits = []
     _,c, z, h, w = data.size()
-    
+
     z_width = np.ceil(float(z / 4 + margin)/max_stride).astype('int')*max_stride
     w_width = np.ceil(float(w / 4 + margin)/max_stride).astype('int')*max_stride
     h_width = np.ceil(float(h / 4 + margin)/max_stride).astype('int')*max_stride
-    
+
     z_pos = [z*3/8-z_width/2,
              z*5/8-z_width/2]
     w_pos = [w*3/8-w_width/2,
@@ -269,14 +269,14 @@ def split64(data,  max_stride, margin):
         for hh in [[0,h_width],[h_pos[0],h_pos[0]+h_width],[h_pos[1],h_pos[1]+h_width],[-h_width,None]]:
             for ww in [[0,w_width],[w_pos[0],w_pos[0]+w_width],[w_pos[1],w_pos[1]+w_width],[-w_width,None]]:
                 splits.append(data[:, :, zz[0]:zz[1], hh[0]:hh[1], ww[0]:ww[1]])
-    
+
     return torch.cat(splits, 0)
 
 def combine64(output, z, h, w):
     splits = []
     for i in range(len(output)):
         splits.append(output[i])
- 
+
     output = np.zeros((
         z,
         h,
@@ -284,25 +284,25 @@ def combine64(output, z, h, w):
         splits[0].shape[3],
         splits[0].shape[4]), np.float32)
 
-    
+
     z_width = int(np.ceil(float(z) / 4))
     h_width = int(np.ceil(float(h) / 4))
     w_width = int(np.ceil(float(w) / 4))
     splitzstart = splits[0].shape[0]/2-z_width/2
     splithstart = splits[0].shape[1]/2-h_width/2
     splitwstart = splits[0].shape[2]/2-w_width/2
-    
+
     i = 0
     for zz,zz2 in zip([[0,z_width],[z_width,z_width*2],[z_width*2,z_width*3],[z_width*3-z,None]],
                           [[0,z_width],[splitzstart,z_width+splitzstart],[splitzstart,z_width+splitzstart],[z_width*3-z,None]]):
-        
+
         for hh,hh2 in zip([[0,h_width],[h_width,h_width*2],[h_width*2,h_width*3],[h_width*3-h,None]],
                           [[0,h_width],[splithstart,h_width+splithstart],[splithstart,h_width+splithstart],[h_width*3-h,None]]):
-            
+
             for ww,ww2 in zip([[0,w_width],[w_width,w_width*2],[w_width*2,w_width*3],[w_width*3-w,None]],
                               [[0,w_width],[splitwstart,w_width+splitwstart],[splitwstart,w_width+splitwstart],[w_width*3-w,None]]):
-                
+
                 output[zz[0]:zz[1], hh[0]:hh[1], ww[0]:ww[1], :, :] = splits[i][zz2[0]:zz2[1], hh2[0]:hh2[1], ww2[0]:ww2[1], :, :]
                 i = i+1
-                
+
     return output

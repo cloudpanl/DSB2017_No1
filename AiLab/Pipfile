@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyspark = "*"
+"pyspark2pmml" = {git = "https://github.com/jpmml/pyspark2pmml.git"}
+pyodps = "*"
+pandas = "*"
+googleapis-common-protos = "*"
+grpcio-tools = "*"
+pyhive = {version = "*", extras = ["hive"]}
+"jinja2" = "*"
+"oss2" = "*"
+opencv-python = "*"
+suanpan = {editable = true, path = "."}
+imageio = "*"
+pydicom = "*"
+keras = "*"
+
+[dev-packages]
+black = "*"
+pylint = "*"
+
+[requires]
+python_version = "3.6"

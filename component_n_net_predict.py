@@ -51,9 +51,9 @@ from suanpan.docker.arguments import Checkpoint, Folder, HiveTable
 @dc.column(
     String(key="pbbColumn", default="pbb_path", help="Pbb column of inputImagesData.")
 )
-@dc.param(Int(key="gpu", help="Number of GPU, 1~N."))
 @dc.param(Int(key="margin", default=16, help="patch margin."))
 @dc.param(Int(key="sidelen", default=64, help="patch side length."))
+@dc.param(Int(key="batchSize", default=16))
 def SPNNetPredict(context):
     args = context.args
 
@@ -66,10 +66,11 @@ def SPNNetPredict(context):
     lbbColumn = args.lbbColumn
     pbbColumn = args.pbbColumn
 
-    gpu = args.gpu
-    useGpu = gpu is not None and torch.cuda.is_available()
+    useGpu = torch.cuda.is_available()
     sidelen = args.sidelen
     margin = args.margin
+    batchSize = args.batchSize
+    workers = asyncio.WORKERS
 
     config, nodNet, loss, getPbb = nodmodel.get_model()
     nodNet.load_state_dict(checkpoint["state_dict"])
@@ -88,14 +89,14 @@ def SPNNetPredict(context):
     dataset = DataBowl3Detector(ids, config, phase="test", split_comber=splitComber)
     dataLoader = DataLoader(
         dataset,
-        batch_size=1,
+        batch_size=batchSize,
         shuffle=False,
-        num_workers=asyncio.WORKERS,
+        num_workers=workers,
         pin_memory=False,
         collate_fn=collate,
     )
 
-    test_detect(dataLoader, nodNet, getPbb, bboxFolder, config, n_gpu=gpu)
+    test_detect(dataLoader, nodNet, getPbb, bboxFolder, config, n_gpu=torch.cuda.device_count())
 
     data[lbbColumn] = data[idColumn] + "_lbb.npy"
     data[pbbColumn] = data[idColumn] + "_pbb.npy"

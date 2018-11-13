@@ -17,7 +17,7 @@ import dsb.training.detector.data as data
 import dsb.training.detector.res18 as model
 from dsb.training.detector.utils import *
 from suanpan import asyncio
-from suanpan.arguments import Float, Int, String
+from suanpan.arguments import Float, Int, String, Bool
 from suanpan.docker import DockerComponent as dc
 from suanpan.docker.arguments import Checkpoint, Folder, HiveTable
 
@@ -173,13 +173,12 @@ def save(path, net, **kwargs):
 @dc.param(Float(key="learningRate", default=0.01))
 @dc.param(Float(key="momentum", default=0.9))
 @dc.param(Float(key="weightDecay", default=1e-4))
-@dc.param(Int(key="gpu"))
 def SPNNetTrain(context):
     torch.manual_seed(0)
 
     args = context.args
 
-    saveFolder = args.outputCheckpoint
+    saveFolder = os.path.dirname(args.outputCheckpoint)
     dataFolder = args.inputDataFolder
     checkoutPointPath = args.inputCheckpoint
     trainIds = args.inputTrainData[args.idColumn]
@@ -191,10 +190,7 @@ def SPNNetTrain(context):
     momentum = args.momentum
     weightDecay = args.weightDecay
     gpu = args.gpu
-    useGpu = gpu is not None and torch.cuda.is_available()
-
-    if useGpu:
-        torch.cuda.set_device(0)
+    useGpu = torch.cuda.is_available()
 
     config, net, loss, getPbb = model.get_model()
 
@@ -207,7 +203,6 @@ def SPNNetTrain(context):
 
     if useGpu:
         print("Use GPU {} for training.".format(gpu))
-        setgpu(gpu)
         net = net.cuda()
         loss = loss.cuda()
         cudnn.benchmark = True
