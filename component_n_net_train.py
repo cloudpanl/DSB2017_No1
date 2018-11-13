@@ -189,7 +189,6 @@ def SPNNetTrain(context):
     learningRate = args.learningRate
     momentum = args.momentum
     weightDecay = args.weightDecay
-    gpu = args.gpu
     useGpu = torch.cuda.is_available()
 
     config, net, loss, getPbb = model.get_model()
@@ -202,7 +201,7 @@ def SPNNetTrain(context):
         startEpoch = 1
 
     if useGpu:
-        print("Use GPU {} for training.".format(gpu))
+        print("Use GPU for training.".format(torch.cuda.current_device()))
         net = net.cuda()
         loss = loss.cuda()
         cudnn.benchmark = True
