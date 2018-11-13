@@ -172,7 +172,7 @@ def SPPreprocess(context):
     SLICE_COUNT = args.slices
 
     patients = os.listdir(data_dir)
-    labels_df = pd.read_csv(args.inputLabelCsv, index_col=0)
+    labels_df = utils.loadFromCsv(args.inputLabelCsv)
 
     pool = Pool(pool_workers)
     labeled_patient_paths = []

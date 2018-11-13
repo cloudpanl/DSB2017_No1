@@ -15,7 +15,7 @@ RUN curl https://bootstrap.pypa.io/get-pip.py | python
 
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-RUN pip install grpcio-tools googleapis-common-protos thrift sasl thrift_sasl pyhive
+RUN pip install grpcio-tools googleapis-common-protos thrift sasl thrift_sasl pyhive[hive]
 
 COPY . /home/AiLab
 

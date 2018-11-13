@@ -15,8 +15,8 @@ RUN conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pk
  && conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/ \
  && conda config --set show_channel_urls yes
 
-RUN conda create --name ${PYTHON_VENV_NAME} --copy --yes python=${PYTHON_VERSION} numpy scipy pandas pip git pyhive \
- && conda install -n ${PYTHON_VENV_NAME} --yes tensorflow cython scikit-learn httplib2
+RUN conda create --name ${PYTHON_VENV_NAME} --copy --yes python=${PYTHON_VERSION} pip git \
+ && conda install -n ${PYTHON_VENV_NAME} --yes cython
 
 RUN alias pip=${CONDA_HOME}/envs/${PYTHON_VENV_NAME}/bin/pip
 

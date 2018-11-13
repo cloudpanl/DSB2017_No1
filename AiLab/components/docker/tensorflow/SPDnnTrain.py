@@ -14,12 +14,6 @@ from suanpan.docker import DockerComponent as dc
 from suanpan.docker.arguments import Folder, H5Model, HiveTable, JsonModel, Npy
 
 
-def getData(folder, paths):
-    for p in paths:
-
-        utils.loadFromNpy(os.path.join(folder, p))
-
-
 @dc.input(
     JsonModel(
         key="inputModel", required=True, help="Direcotry path to load the model file."
@@ -27,8 +21,7 @@ def getData(folder, paths):
 )
 @dc.input(
     H5Model(
-        key="resumeWeights",
-        required=True,
+        key="inputWeights",
         help="Optional path of *.h5 weights file to resume training.",
     )
 )
@@ -36,14 +29,14 @@ def getData(folder, paths):
 @dc.input(Folder(key="inputDataFolder", required=True))
 @dc.output(
     H5Model(
-        key="saveWeights",
+        key="outputWeights",
         required=True,
         help="File path to save the trained model weights.",
     )
 )
 @dc.output(
     Folder(
-        key="tensorBoard",
+        key="outputTensorBoard",
         required=True,
         help="Directory to save tensor board files during training.",
     )
@@ -86,15 +79,15 @@ def SPDnnTrain(context):
     )
 
     model_file = args.inputModel
-    resume_weights = args.resumeWeights
-    save_weights = args.saveWeights
+    resume_weights = args.inputWeights
+    save_weights = args.outputWeights
+    tensor_board = args.outputTensorBoard
 
     optimizer = args.optimizer
     lr = args.lr
     batch_size = args.batchSize
     epochs = args.epochs
     shuffle = args.shuffle
-    tensor_board = args.tensorBoard
     seed = args.seed
 
     # Seed to allow reproducible results.

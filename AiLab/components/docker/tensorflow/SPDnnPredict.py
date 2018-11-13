@@ -23,13 +23,12 @@ from suanpan.docker.arguments import Folder, H5Model, HiveTable, JsonModel, Npy
 @dc.input(HiveTable(key="inputData", table="inputTable", partition="inputPartition"))
 @dc.input(Folder(key="inputDataFolder", required=True))
 @dc.output(
-    Npy(
-        key="prediction",
-        required=True,
-        help="Input Numpy .npy file containing test samples.",
-    )
+    HiveTable(key="outputData", table="outputTable", partition="outputPartition")
 )
+@dc.output(Folder(key="outputDataFolder", required=True))
+@dc.column(String(key="idColumn", default="id"))
 @dc.column(String(key="dataColumn", default="data_path"))
+@dc.column(String(key="predictionColumn", default="prediction_path"))
 @dc.param(
     Int(key="batchSize", default=128, help="Batch size to use during predicting.")
 )
@@ -46,7 +45,7 @@ def SPDnnPredict(context):
 
     model_file = args.inputModel
     load_weights = args.inputWeights
-    save_predicts = args.prediction
+    predictions_dir = args.args.outputDataFolder
     batch_size = args.batchSize
 
     # Load model file from json.
@@ -61,12 +60,13 @@ def SPDnnPredict(context):
     print("Load weights from: {}".format(load_weights))
 
     # Predict with the model.
-    predicts = model.predict(x_test, batch_size=batch_size, verbose=1)
+    predictions = model.predict(x_test, batch_size=batch_size, verbose=1)
 
-    np.save(save_predicts, predicts)
-    print("Predicts saved to: {}".format(save_predicts))
+    data[args.predictionColumn] = data[args.idColumn] + "_prediction.npy"
+    for path, prediction in zip(data[args.predictionColumn], predictions):
+        utils.saveAsNpy(os.path.join(predictions_dir, path), prediction)
 
-    return save_predicts
+    return data, predictions_dir
 
 
 if __name__ == "__main__":

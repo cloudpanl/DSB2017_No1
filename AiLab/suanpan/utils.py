@@ -4,8 +4,19 @@ from __future__ import print_function
 import cv2
 import imageio
 import numpy as np
+import pandas as pd
 
 from suanpan import asyncio, convert, path
+
+
+def loadFromCsv(filepath):
+    return pd.read_csv(filepath, index_col=0)
+
+
+def saveAsCsv(filepath, data):
+    path.safeMkdirsForFile(filepath)
+    data.to_csv(filepath, data)
+    return filepath
 
 
 def loadFromNpy(filepath):
@@ -37,11 +48,7 @@ def saveAsAnimatedGif(filepath, data):
 
 
 def saveAsImage(filepath, data, flag=None):
-    mapping = {
-        None: saveImage,
-        "flat": saveAsFlatImage,
-        "animated": saveAsAnimatedGif,
-    }
+    mapping = {None: saveImage, "flat": saveAsFlatImage, "animated": saveAsAnimatedGif}
     func = mapping.get(flag)
     if not func:
         raise Exception("Unknow flag: {}".format(flag))

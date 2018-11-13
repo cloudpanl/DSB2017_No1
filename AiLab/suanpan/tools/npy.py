@@ -30,7 +30,7 @@ def showImage(filepath):
 @c.param(String(key="toImage"))
 @c.param(String(key="flag"))
 @c.param(Bool(key="show", default=False))
-def npy(context):
+def SPNpyTools(context):
     args = context.args
 
     data = utils.loadFromNpy(args.npy)
@@ -39,8 +39,10 @@ def npy(context):
         if args.show:
             showImage(filepath)
     else:
-        import pdb; pdb.set_trace()
+        import pdb
+
+        pdb.set_trace()
 
 
 if __name__ == "__main__":
-    npy()  # pylint: disable=no-value-for-parameter
+    SPNpyTools()  # pylint: disable=no-value-for-parameter

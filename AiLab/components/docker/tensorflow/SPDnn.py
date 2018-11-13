@@ -6,6 +6,7 @@ import os
 from keras.layers import Dense, Dropout, Input
 from keras.models import Model
 
+from suanpan import path
 from suanpan.arguments import Float, Int, ListOfInt
 from suanpan.docker import DockerComponent as dc
 from suanpan.docker.arguments import JsonModel
@@ -41,7 +42,7 @@ from suanpan.docker.arguments import JsonModel
 def SPDnn(context):
     args = context.args
 
-    model_dir = args.outputModel
+    model_file = args.outputModel
     num_classes = args.numClasses
     input_shape = (args.inputShape,)
     hidden_units = args.hiddenUnits
@@ -63,8 +64,6 @@ def SPDnn(context):
     model.summary()
 
     # Save model file.
-    os.makedirs(model_dir, exist_ok=True)
-    model_file = os.path.join(model_dir, "model.json")
     with open(model_file, "w") as file:
         file.write(model.to_json())
 

@@ -5,7 +5,6 @@ import math
 from pyhive import hive
 
 import pandas as pd
-from suanpan import asyncio
 from suanpan.log import logger
 
 
@@ -106,10 +105,18 @@ class HiveDataWarehouse(object):
 
     def execute(self, sql):
         with self.cursor() as cursor:
+            return self._execute(cursor, sql)
+
+    def _execute(self, cursor, sql):
+        try:
             return cursor.execute(sql)
+        except Exception as e:
+            logger.error("SQL: {}".format(sql))
+            raise e
 
     def createTable(self, cursor, table, columns):
-        cursor.execute(
+        self._execute(
+            cursor,
             u"create table if not exists {table} ({columns})".format(
                 table=table,
                 columns=u", ".join(
@@ -119,23 +126,17 @@ class HiveDataWarehouse(object):
         )
 
     def dropTable(self, cursor, table):
-        cursor.execute(u"drop table {}".format(table))
+        self._execute(cursor, u"drop table {}".format(table))
 
     def insertData(self, cursor, table, data, mode="into", per=10000):
         dataLength = len(data)
         logger.info(u"Insert into tabel {}: total {}".format(table, dataLength))
         pieces = dataLength // per + 1
-        workers = min(pieces, asyncio.WORKERS)
-        with asyncio.multiThread(workers) as pool:
-            for i in range(pieces):
-                begin = per * i
-                end = per * (i + 1)
-                values = data[begin:end]
-                pool.apply_async(
-                    self.insertPiece,
-                    args=(cursor, table, values),
-                    kwds={"mode": mode, "begin": begin},
-                )
+        for i in range(pieces):
+            begin = per * i
+            end = per * (i + 1)
+            values = data[begin:end]
+            self.insertPiece(cursor, table, values, mode=mode, begin=begin)
 
     def insertPiece(self, cursor, table, data, mode="into", begin=0):
         if not data.empty:
@@ -144,7 +145,8 @@ class HiveDataWarehouse(object):
             valueGroup = lambda d: u"({})".format(
                 u", ".join([u'"{}"'.format(i) for i in d])
             )
-            cursor.execute(
+            self._execute(
+                cursor,
                 u"insert {mode} {table} values {values}".format(
                     table=table,
                     values=u", ".join(data.apply(valueGroup, axis=1).values),
@@ -154,10 +156,10 @@ class HiveDataWarehouse(object):
             logger.info(u"[{} - {}] Done.".format(begin, end))
 
     def useDatabase(self, cursor, database):
-        cursor.execute(u"use {}".format(database))
+        self._execute(cursor, u"use {}".format(database))
 
     def selectCurrentTimestamp(self, cursor):
-        cursor.execute(u"select current_timestamp()")
+        self._execute(cursor, u"select current_timestamp()")
 
     def getColumns(self, data):
         return [

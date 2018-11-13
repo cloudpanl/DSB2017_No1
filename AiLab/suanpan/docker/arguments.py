@@ -105,6 +105,8 @@ class File(String):
         self.filePath = (
             storage.getPathInTempStore(self.objectName) if self.objectName else None
         )
+        if self.filePath:
+            path.safeMkdirsForFile(self.filePath)
         self.value = self.filePath
         return self.filePath
 

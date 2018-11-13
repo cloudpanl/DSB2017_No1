@@ -5,7 +5,7 @@ ARG PYTHON_VERSION=3
 WORKDIR /home/AiLab
 
 RUN apt-get update \
- && apt-get install -y curl gcc g++ python python-dev python3 python3-dev sasl2-bin libsasl2-2 libsasl2-dev libsasl2-modules libsm6 libxrender1 libxext-dev \
+ && apt-get install -y curl gcc g++ python python-dev python3 python3-dev sasl2-bin libsasl2-2 libsasl2-dev libsasl2-modules libsm6 libxrender1 libxext-dev libglib2.0-0 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 

@@ -28,7 +28,6 @@ suanpan/spark/db.py
 suanpan/spark/io.py
 suanpan/spark/odpsops.py
 suanpan/tools/__init__.py
+suanpan/tools/dw.py
 suanpan/tools/npy.py
-suanpan/tools/storage_download.py
-suanpan/tools/storage_remove.py
-suanpan/tools/storage_upload.py
+suanpan/tools/storage.py

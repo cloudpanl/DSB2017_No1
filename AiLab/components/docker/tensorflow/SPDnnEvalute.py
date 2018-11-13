@@ -25,7 +25,7 @@ from suanpan.docker.arguments import Folder, H5Model, HiveTable, JsonModel, Npy
 @dc.input(HiveTable(key="inputData", table="inputTable", partition="inputPartition"))
 @dc.input(Folder(key="inputDataFolder", required=True))
 @dc.output(
-    HiveTable(key="evaluateData", table="outputTable", partition="outputPartition")
+    HiveTable(key="outputData", table="outputTable", partition="outputPartition")
 )
 @dc.column(String(key="dataColumn", default="data_path"))
 @dc.column(String(key="labelColumn", default="label_path"))

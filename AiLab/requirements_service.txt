@@ -1,0 +1,6 @@
+googleapis-common-protos==1.6.0b6
+grpcio-tools==1.16.1rc1
+sasl==0.2.1
+thrift-sasl==0.3.0
+thrift==0.11.0
+pyhive[hive]==0.6.1
