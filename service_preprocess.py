@@ -26,6 +26,7 @@ class ServiceProprocess(DSBService):
             n_worker=asyncio.WORKERS,
             use_existing=False,
         )
+
         storage.upload(ossResultFolder, localResultFolder)
         return dict(out1=ossResultFolder)
 

@@ -37,9 +37,8 @@ def rpc_call(target, **kwargs):
 
 
 def main():
-    # import pdb; pdb.set_trace()
     preprocessed_data = preprocess(DATA)
-    result_data = predict(CKPT, preprocessed_data)
+    result_data = predict(CKPT, "majik_test/dsb3/service/preprocess")
     dector_images = dector(result_data)
 
 

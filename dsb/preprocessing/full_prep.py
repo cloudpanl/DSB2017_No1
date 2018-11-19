@@ -7,7 +7,7 @@ from skimage import measure
 import warnings
 from scipy.ndimage.morphology import binary_dilation,generate_binary_structure
 from skimage.morphology import convex_hull_image
-from multiprocessing import Pool
+from multiprocessing.dummy import Pool
 from functools import partial
 from .step1 import step1_python
 import warnings
@@ -114,12 +114,14 @@ def full_prep(data_path,prep_folder,n_worker = None,use_existing=True):
         os.makedirs(prep_folder)
 
     print('starting preprocessing')
+    pool = Pool(n_worker)
     filelist = [f for f in os.listdir(data_path)]
     partial_savenpy = partial(savenpy,filelist=filelist,prep_folder=prep_folder,
                               data_path=data_path,use_existing=use_existing)
 
     N = len(filelist)
-    for i in range(N):
-        partial_savenpy(i)
+    _=pool.map(partial_savenpy,range(N))
+    pool.close()
+    pool.join()
     print('end preprocessing')
     return filelist

@@ -35,7 +35,7 @@ class ServicePredict(DSBService):
         sidelen = 64
         margin = 16
         batchSize = 16
-        workers = asyncio.WORKERS
+        workers = 0
 
         config, nodNet, loss, getPbb = nodmodel.get_model()
         nodNet.load_state_dict(checkpoint["state_dict"])
@@ -50,7 +50,7 @@ class ServicePredict(DSBService):
             pad_value=config["pad_value"],
         )
 
-        ids = os.listdir(localDataFolder)
+        ids = set(i.split("_")[0] for i in os.listdir(localDataFolder))
         dataset = DataBowl3Detector(ids, config, phase="test", split_comber=splitComber)
         dataLoader = DataLoader(
             dataset,

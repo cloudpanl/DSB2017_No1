@@ -41,7 +41,7 @@ def test_detect(data_loader, net, get_pbb, save_dir, config,n_gpu):
                     isfeat = True
             n_per_run = n_gpu
             print(_data.size())
-            splitlist = list(range(0,len(_data)+1,n_gpu)) if n_gpu else lost(range(0,len(_data)+1))
+            splitlist = list(range(0,len(_data)+1,n_gpu)) if n_gpu else list(range(0,len(_data)+1))
             if splitlist[-1]!=len(_data):
                 splitlist.append(len(_data))
             outputlist = []
