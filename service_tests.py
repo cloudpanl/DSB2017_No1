@@ -37,9 +37,9 @@ def rpc_call(target, **kwargs):
 
 
 def main():
-    preprocessed_data = preprocess(DATA)
-    result_data = predict(CKPT, "majik_test/dsb3/service/preprocess")
-    dector_images = dector(result_data)
+    # preprocessed_data = preprocess(DATA)
+    # result_data = predict(CKPT, preprocessed_data)
+    dector_images = dector("majik_test/dsb3/service/predict")
 
 
 if __name__ == "__main__":

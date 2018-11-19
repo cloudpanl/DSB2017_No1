@@ -46,7 +46,7 @@ def pickWithPbb(image, pbb, maskFunc=rectangle, *arg, **kwargs):
 
 class ServiceDector(DSBService):
     def call(self, request, context):
-        ossDataFolder = request.in2
+        ossDataFolder = request.in1
         localDataFolder = storage.download(
             ossDataFolder, storage.getPathInTempStore(ossDataFolder)
         )

@@ -78,6 +78,8 @@ def test_detect(data_loader, net, get_pbb, save_dir, config,n_gpu):
             print([index,shortname])
             e = time.time()
             print('saving: result of {} to dir:{}'.format(shortname, save_dir))
+            if not os.path.exists(save_dir):
+                os.makedirs(save_dir)
             np.save(os.path.join(save_dir, shortname+'_pbb.npy'), pbb)
             np.save(os.path.join(save_dir, shortname+'_lbb.npy'), lbb)
     end_time = time.time()
