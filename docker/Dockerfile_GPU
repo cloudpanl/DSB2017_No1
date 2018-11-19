@@ -6,7 +6,7 @@ RUN apt-get update \
 
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-RUN pip install pandas thrift sasl thrift_sasl pyhive oss2 opencv-python imageio pydicom scipy h5py scikit-image imageio simpleitk matplotlib nvidia-ml-py3
+RUN pip install suanpan[docker] pydicom scipy h5py scikit-image simpleitk matplotlib nvidia-ml-py3
 
 WORKDIR /home/DSB3
 

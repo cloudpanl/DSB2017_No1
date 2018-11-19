@@ -79,10 +79,10 @@ def SPData2MaskImages(context):
         image = utils.loadFromNpy(
             os.path.join(args.inputDataFolder, row[args.dataColumn])
         )
-        pdd = utils.loadFromNpy(
+        pbb = utils.loadFromNpy(
             os.path.join(args.inputBboxDataFolder, row[args.pbbColumn])
         )
-        images = [img for img in pickWithPbb(image, pdd)]
+        images = [img for img in pickWithPbb(image, pbb)]
         utils.saveAsImages(
             os.path.join(args.outputImagesFolder, row[args.idColumn]), images
         )

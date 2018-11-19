@@ -13,13 +13,13 @@ scikit-image = "*"
 pydicom = "*"
 torch = "==0.4.1"
 torchvision = "*"
-suanpan = {editable = true, path = "./../AiLab"}
 numpy = "*"
 opencv-python = "*"
 imageio = "*"
 simpleitk = "*"
 pyhive = {extras = ["hive"], version = "*"}
 "oss2" = "*"
+suanpan = {path = "./../AiLab"}
 
 [dev-packages]
 pylint = "*"
