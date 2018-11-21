@@ -21,7 +21,7 @@ from suanpan import asyncio
 from suanpan.arguments import String
 from suanpan.docker import DockerComponent as dc
 from suanpan.docker.arguments import Csv, Folder, HiveTable
-from suanpan.docker.io import storage
+from suanpan.io import storage
 
 
 def resample(imgs, spacing, new_spacing, order=2):

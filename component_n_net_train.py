@@ -201,7 +201,7 @@ def SPNNetTrain(context):
         startEpoch = 1
 
     if useGpu:
-        print("Use GPU for training.".format(torch.cuda.current_device()))
+        print("Use GPU {} for training.".format(torch.cuda.current_device()))
         net = net.cuda()
         loss = loss.cuda()
         cudnn.benchmark = True

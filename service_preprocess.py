@@ -2,33 +2,32 @@
 from __future__ import print_function
 
 import os
-import tempfile
-
-from suanpan import asyncio
-from suanpan.docker.io import storage
 
 from dsb.preprocessing import full_prep
-from service import DSBService
+from suanpan import asyncio
+from suanpan.services import Handler as h
+from suanpan.services import Service
+from suanpan.services.arguments import Folder
 
 
-class ServiceProprocess(DSBService):
-    def call(self, request, context):
-        ossDataFolder = request.in1
-        localDataFolder = storage.download(
-            ossDataFolder, storage.getPathInTempStore(ossDataFolder)
-        )
-        ossResultFolder = "majik_test/dsb3/service/preprocess"
-        localResultFolder = storage.getPathInTempStore(ossResultFolder)
+class ServiceProprocess(Service):
+
+    @h.input(Folder(key="inputDataFolder"))
+    @h.output(Folder(key="outputDataFolder"))
+    def call(self, context):
+        args = context.args
+
+        inputDataFolder = args.inputDataFolder
+        outputDataFolder = args.outputDataFolder
 
         full_prep(
-            localDataFolder,
-            localResultFolder,
+            inputDataFolder,
+            outputDataFolder,
             n_worker=asyncio.WORKERS,
             use_existing=False,
         )
 
-        storage.upload(ossResultFolder, localResultFolder)
-        return dict(out1=ossResultFolder)
+        return outputDataFolder
 
 
 if __name__ == "__main__":

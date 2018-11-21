@@ -5,11 +5,12 @@ import os
 import tempfile
 
 import cv2
-from suanpan import convert, utils
-from suanpan.docker.io import storage
 
 from dsb.layers import nms
-from service import DSBService
+from suanpan import convert, utils
+from suanpan.services import Handler as h
+from suanpan.services import Service
+from suanpan.services.arguments import Folder
 
 BLUE = (255, 0, 0)
 GREEN = (0, 255, 0)
@@ -44,26 +45,25 @@ def pickWithPbb(image, pbb, maskFunc=rectangle, *arg, **kwargs):
     return (_mask(box) for box in pbb)
 
 
-class ServiceDector(DSBService):
-    def call(self, request, context):
-        ossDataFolder = request.in1
-        localDataFolder = storage.download(
-            ossDataFolder, storage.getPathInTempStore(ossDataFolder)
-        )
+class ServiceDector(Service):
 
-        ossResultFolder = "majik_test/dsb3/service/dector"
-        localResultFolder = storage.getPathInTempStore(ossResultFolder)
+    @h.input(Folder(key="inputDataFolder", required=True))
+    @h.output(Folder(key="outputDataFolder", required=True))
+    def call(self, context):
+        args = context.args
 
-        ids = os.listdir(localDataFolder)
+        inputDataFolder = args.inputDataFolder
+        outputDataFolder = args.outputDataFolder
+
+        ids = os.listdir(inputDataFolder)
 
         for i in ids:
-            image = utils.loadFromNpy(os.path.join(localDataFolder, i, "data.npy"))
-            pbb = utils.loadFromNpy(os.path.join(localDataFolder, i, "pbb.npy"))
+            image = utils.loadFromNpy(os.path.join(inputDataFolder, i, "data.npy"))
+            pbb = utils.loadFromNpy(os.path.join(inputDataFolder, i, "pbb.npy"))
             images = [img for img in pickWithPbb(image, pbb)]
-            utils.saveAsImages(os.path.join(localResultFolder, i), images)
+            utils.saveAsImages(os.path.join(outputDataFolder, i), images)
 
-        storage.upload(ossResultFolder, localResultFolder)
-        return dict(out1=ossResultFolder)
+        return outputDataFolder
 
 
 if __name__ == "__main__":

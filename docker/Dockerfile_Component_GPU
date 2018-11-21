@@ -4,6 +4,8 @@ RUN apt-get update \
  && apt-get install -y gcc g++ sasl2-bin libsasl2-2 libsasl2-dev libsasl2-modules libsm6 libxrender1 libxext-dev libglib2.0-0 \
  && apt-get clean
 
+RUN python --version
+
 RUN pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 RUN pip install suanpan[docker] pydicom scipy h5py scikit-image simpleitk matplotlib nvidia-ml-py3
@@ -11,7 +13,5 @@ RUN pip install suanpan[docker] pydicom scipy h5py scikit-image simpleitk matplo
 WORKDIR /home/DSB3
 
 COPY . /home/DSB3
-
-RUN pip install /home/DSB3/AiLab
 
 CMD [ "bash" ]
