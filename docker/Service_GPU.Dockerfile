@@ -1,6 +1,6 @@
 FROM pytorch/pytorch
 
-ARG PYPI_MIRROR="https://mirrors.aliyun.com/pypi/simple"
+ENV PYPI_MIRROR "https://mirrors.aliyun.com/pypi/simple"
 
 RUN apt-get update \
  && apt-get install -y gcc g++ sasl2-bin libsasl2-2 libsasl2-dev libsasl2-modules libsm6 libxrender1 libxext-dev libglib2.0-0 \

@@ -1,6 +1,6 @@
 FROM registry.cn-shanghai.aliyuncs.com/shuzhi/service_base:3
 
-ARG PYPI_MIRROR="https://mirrors.aliyun.com/pypi/simple"
+ENV PYPI_MIRROR "https://mirrors.aliyun.com/pypi/simple"
 
 RUN pip config set global.index-url ${PYPI_MIRROR}
 
