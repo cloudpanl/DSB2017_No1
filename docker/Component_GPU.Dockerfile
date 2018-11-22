@@ -12,6 +12,8 @@ RUN pip install --upgrade pip
 
 RUN pip install suanpan[docker] pydicom scipy h5py scikit-image simpleitk matplotlib nvidia-ml-py3
 
+RUN rm -rf ~/.cache/pip
+
 WORKDIR /home/DSB3
 
 COPY . /home/DSB3
