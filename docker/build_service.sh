@@ -5,7 +5,7 @@ set -xe
 IMAGE_NAME=kaggle_no1_service
 IMAGE=registry.cn-shanghai.aliyuncs.com/shuzhi/${IMAGE_NAME}
 
-docker build -t ${IMAGE}:$1-$2 . -f ./docker/Dockerfile_Service_$1
+docker build -t ${IMAGE}:$1-$2 . -f ./docker/Service_$1.Dockerfile ${@:3}
 
 docker tag ${IMAGE}:$1-$2 ${IMAGE}:$1
 docker tag ${IMAGE}:$1-$2 ${IMAGE}:latest
