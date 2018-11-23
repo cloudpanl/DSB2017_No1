@@ -20,7 +20,7 @@ from dsb.preprocessing.step1 import step1_python
 from suanpan import asyncio
 from suanpan.arguments import String
 from suanpan.docker import DockerComponent as dc
-from suanpan.docker.arguments import Csv, Folder, HiveTable
+from suanpan.docker.arguments import File, Folder, HiveTable
 from suanpan.io import storage
 
 
@@ -458,8 +458,8 @@ def scan_prep_results(folder, id_column, image_column, label_column):
         help="Luna segment or similar directory path.",
     )
 )
-@dc.input(Csv(key="inputAbbr", required=True, help="Luna abbr path."))
-@dc.input(Csv(key="inputLabels", required=True, help="Luna label path."))
+@dc.input(File(key="inputAbbr", name="data", type="csv", required=True, help="Luna abbr path."))
+@dc.input(File(key="inputLabels", name="data", type="csv", required=True, help="Luna label path."))
 @dc.output(
     HiveTable(
         key="outputData", table="outputDataTable", partition="outputDataPartition"
