@@ -6,9 +6,8 @@ RUN pip config set global.index-url ${PYPI_MIRROR}
 
 RUN pip install --upgrade pip
 
-RUN pip install torch torchvision pydicom scipy h5py scikit-image imageio simpleitk
-
-RUN rm -rf ~/.cache/pip
+RUN pip install torch torchvision pydicom scipy h5py scikit-image imageio simpleitk \
+ && rm -rf ~/.cache/pip
 
 WORKDIR /home/DSB3
 

@@ -10,9 +10,8 @@ RUN pip config set global.index-url ${PYPI_MIRROR}
 
 RUN pip install --upgrade pip
 
-RUN pip install suanpan[docker] pydicom scipy h5py scikit-image simpleitk matplotlib nvidia-ml-py3
-
-RUN rm -rf ~/.cache/pip
+RUN pip install suanpan[docker] pydicom scipy h5py scikit-image simpleitk matplotlib nvidia-ml-py3 \
+ && rm -rf ~/.cache/pip
 
 WORKDIR /home/DSB3
 
