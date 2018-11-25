@@ -382,7 +382,7 @@ def prepare_luna(luna_raw, luna_abbr, luna_data, luna_segment, force=False):
                 os.path.join(d, f),
                 os.path.join(luna_data, filename + f[-4:]),
             )
-            shutil.move(fromfile, tofile)
+            shutil.copy(fromfile, tofile)
             print("{} -> {}".format(fromfile, tofile))
 
     # Update the 'ElementDataFile' key in .mhd file with new .raw file name in 'luna_data'(a.k.a luna/allset).
@@ -415,7 +415,7 @@ def prepare_luna(luna_raw, luna_abbr, luna_data, luna_segment, force=False):
                 os.path.join(luna_segment, f),
                 os.path.join(luna_segment, filename + lastfix),
             )
-            shutil.move(fromfile, tofile)
+            shutil.copy(fromfile, tofile)
             print("{} -> {}".format(fromfile, tofile))
 
     # Update the 'ElementDataFile' key in lung segment .mhd file in
