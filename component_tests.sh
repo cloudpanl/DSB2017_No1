@@ -7,7 +7,6 @@ OSS_ACCESS_ID="********"
 OSS_ACCESS_KEY="********"
 OSS_BUCKET="********"
 
-pipenv run \
 python component_dsb3_preprocess.py \
 --dw-type "hive" \
 --dw-hive-host ${HIVE_HOST} \
@@ -23,7 +22,6 @@ python component_dsb3_preprocess.py \
 --outputDataTable "component_dsb3_preprocess_output_table" \
 --outputDataFolder "majik_test/component_dsb3_preprocess_output_data"
 
-pipenv run \
 python component_luna_preprocess.py \
 --dw-type "hive" \
 --dw-hive-host ${HIVE_HOST} \
@@ -41,7 +39,6 @@ python component_luna_preprocess.py \
 --outputDataTable "component_luna_preprocess_output_data" \
 --outputDataFolder "majik_test/component_luna_preprocess_output_data"
 
-pipenv run \
 python component_folder_combine.py \
 --dw-type "hive" \
 --dw-hive-host ${HIVE_HOST} \
@@ -56,7 +53,6 @@ python component_folder_combine.py \
 --inputFolder2 "majik_test/component_luna_preprocess_output_data" \
 --outputFolder "majik_test/component_folder_combine_output_data"
 
-pipenv run \
 python component_n_net_train.py \
 --dw-type "hive" \
 --dw-hive-host ${HIVE_HOST} \
@@ -73,7 +69,6 @@ python component_n_net_train.py \
 --outputCheckpoint "majik_test/component_n_net_train_output_checkpoint" \
 --idColumn "patient"
 
-pipenv run \
 docker run --rm registry.cn-shanghai.aliyuncs.com/shuzhi/dsb3_no1 \
 python component_n_net_predict.py \
 --dw-type "hive" \
@@ -92,7 +87,6 @@ python component_n_net_predict.py \
 --outputBboxFolder "majik_test/component_n_net_predict_output_bbox_data" \
 --idColumn "patient"
 
-pipenv run \
 python component_data_to_images.py \
 --dw-type "hive" \
 --dw-hive-host ${HIVE_HOST} \
@@ -109,7 +103,6 @@ python component_data_to_images.py \
 --idColumn "patient" \
 --dataColumn "image_path"
 
-pipenv run \
 python component_data_to_mask_images.py \
 --dw-type "hive" \
 --dw-hive-host ${HIVE_HOST} \
@@ -129,7 +122,6 @@ python component_data_to_mask_images.py \
 
 # Predict
 
-pipenv run \
 python component_predict_preprocess.py \
 --dw-type "hive" \
 --dw-hive-host ${HIVE_HOST} \
@@ -144,7 +136,6 @@ python component_predict_preprocess.py \
 --outputDataTable "component_predict_preprocess_output_data" \
 --outputDataFolder "majik_test/component_predict_preprocess_output_data"
 
-pipenv run \
 python component_n_net_predict.py \
 --dw-type "hive" \
 --dw-hive-host ${HIVE_HOST} \
@@ -162,7 +153,6 @@ python component_n_net_predict.py \
 --outputBboxFolder "majik_test/component_n_net_predict_output_bbox_data_predict" \
 --idColumn "patient"
 
-pipenv run \
 python component_data_to_mask_images.py \
 --dw-type "hive" \
 --dw-hive-host ${HIVE_HOST} \
