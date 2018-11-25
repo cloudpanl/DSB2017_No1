@@ -13,18 +13,23 @@ from dsb.test_detect import test_detect
 from suanpan import path
 from suanpan.services import Handler as h
 from suanpan.services import Service
-from suanpan.services.arguments import Checkpoint, Folder
+from suanpan.services.arguments import Folder, String
 
 
 class ServicePredict(Service):
 
-    @h.input(Checkpoint(key="inputCheckpoint", required=True))
+    arguments = [String(key="model", required=True)]
+
+    def __init__(self):
+        super(ServicePredict, self).__init__()
+        self.model = torch.load(self.args.model)
+
     @h.input(Folder(key="inputDataFolder", required=True))
     @h.output(Folder(key="outputDataFolder", required=True))
     def call(self, context):
         args = context.args
 
-        checkpoint = torch.load(args.inputCheckpoint)
+        checkpoint = self.model
         dataFolder = args.inputDataFolder
 
         outputDataFolder = args.outputDataFolder
