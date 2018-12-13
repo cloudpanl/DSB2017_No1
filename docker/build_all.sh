@@ -2,7 +2,9 @@
 
 set -xe
 
-bash docker/build_component.sh CPU $@
-bash docker/build_component.sh GPU $@
-bash docker/build_service.sh CPU $@
-bash docker/build_service.sh GPU $@
+VERSION="2.0"
+
+bash docker/build_component.sh CPU ${VERSION} $@
+bash docker/build_component.sh GPU ${VERSION} $@
+bash docker/build_service.sh CPU ${VERSION} $@
+bash docker/build_service.sh GPU ${VERSION} $@
