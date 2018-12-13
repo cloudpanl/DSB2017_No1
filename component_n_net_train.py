@@ -11,6 +11,7 @@ from torch import optim
 from torch.autograd import Variable
 from torch.backends import cudnn
 from torch.nn import DataParallel
+from torch.nn.parallel import DistributedDataParallel
 from torch.utils.data import DataLoader
 
 import dsb.training.detector.data as data
@@ -173,6 +174,10 @@ def save(path, net, **kwargs):
 @dc.param(Float(key="learningRate", default=0.01))
 @dc.param(Float(key="momentum", default=0.9))
 @dc.param(Float(key="weightDecay", default=1e-4))
+@dc.param(Int(key="worldSize", default=1))
+@dc.param(String(key="distBackend", default="nccl"))
+@dc.param(String(key="distUrl", default="env://"))
+@dc.param(Int(key="distRank", default=1))
 def SPNNetTrain(context):
     torch.manual_seed(0)
 
@@ -190,6 +195,15 @@ def SPNNetTrain(context):
     momentum = args.momentum
     weightDecay = args.weightDecay
     useGpu = torch.cuda.is_available()
+    distributed = args.worldSize > 1
+
+    if distributed:
+        torch.distributed.init_process_group(
+            backend=args.distBackend,
+            init_method=args.distUrl,
+            world_size=args.worldSize,
+            rank=args.distRank,
+        )
 
     config, net, loss, getPbb = model.get_model()
 
@@ -205,25 +219,31 @@ def SPNNetTrain(context):
         net = net.cuda()
         loss = loss.cuda()
         cudnn.benchmark = True
-        net = DataParallel(net)
+        net = DistributedDataParallel(net) if distributed else DataParallel(net)
     else:
         print("Use CPU for training.")
         net = net.cpu()
 
     # Train sets
-    dataset = data.DataBowl3Detector(dataFolder, trainIds, config, phase="train")
+    trainDataset = data.DataBowl3Detector(dataFolder, trainIds, config, phase="train")
+    trainSampler = (
+        torch.utils.data.distributed.DistributedSampler(trainDataset)
+        if distributed
+        else None
+    )
     trainLoader = DataLoader(
-        dataset,
+        trainDataset,
         batch_size=batchSize,
-        shuffle=True,
+        shuffle=(trainSampler is None),
         num_workers=workers,
         pin_memory=True,
+        sampler=trainSampler,
     )
 
     # Validation sets
-    dataset = data.DataBowl3Detector(dataFolder, validateIds, config, phase="val")
+    valDataset = data.DataBowl3Detector(dataFolder, validateIds, config, phase="val")
     valLoader = DataLoader(
-        dataset,
+        valDataset,
         batch_size=batchSize,
         shuffle=False,
         num_workers=workers,
