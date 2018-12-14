@@ -2,7 +2,7 @@
 
 set -xe
 
-VERSION="2.0"
+VERSION="2.2"
 
 bash docker/build_component.sh CPU ${VERSION} $@
 bash docker/build_component.sh GPU ${VERSION} $@

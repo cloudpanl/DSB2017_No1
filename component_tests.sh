@@ -53,21 +53,28 @@ python component_folder_combine.py \
 --inputFolder2 "majik_test/component_luna_preprocess_output_data" \
 --outputFolder "majik_test/component_folder_combine_output_data"
 
+docker run --ipc=host --runtime=nvidia \
+-v test:/var/nfs/general \
+registry.cn-shanghai.aliyuncs.com/shuzhi/kaggle_no1_component:GPU \
 python component_n_net_train.py \
 --dw-type "hive" \
---dw-hive-host ${HIVE_HOST} \
---dw-hive-port ${HIVE_PORT} \
+--dw-hive-host "47.94.82.175" \
+--dw-hive-port "10000" \
 --dw-hive-username "spark" \
 --storage-type 'oss' \
---storage-oss-access-id ${OSS_ACCESS_ID} \
---storage-oss-access-key ${OSS_ACCESS_KEY} \
---storage-oss-bucket-name ${OSS_BUCKET} \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-bucket-name 'suanpan' \
 --storage-oss-temp-store 'tmp' \
 --inputTrainDataTable "component_dsb3_preprocess_output_table" \
 --inputValidateDataTable "component_luna_preprocess_output_data" \
 --inputDataFolder "majik_test/component_folder_combine_output_data" \
 --outputCheckpoint "majik_test/component_n_net_train_output_checkpoint" \
---idColumn "patient"
+--idColumn "patient" \
+--worldSize "2" \
+--distBackend "nccl" \
+--distUrl "file:///var/nfs/general/trainfile" \
+--distRank "1"
 
 docker run --rm registry.cn-shanghai.aliyuncs.com/shuzhi/dsb3_no1 \
 python component_n_net_predict.py \

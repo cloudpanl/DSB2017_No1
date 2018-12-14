@@ -13,6 +13,7 @@ from torch.backends import cudnn
 from torch.nn import DataParallel
 from torch.nn.parallel import DistributedDataParallel
 from torch.utils.data import DataLoader
+import torch.utils.data.distributed
 
 import dsb.training.detector.data as data
 import dsb.training.detector.res18 as model
