@@ -49,9 +49,9 @@ def train(data_loader, net, loss, epoch, optimizer, get_lr, save_dir):
         target = Variable(target)
         coord = Variable(coord)
         if use_gpu:
-            data = data.cuda(async=True)
-            target = target.cuda(async=True)
-            coord = coord.cuda(async=True)
+            data = data.cuda(non_blocking=True)
+            target = target.cuda(non_blocking=True)
+            coord = coord.cuda(non_blocking=True)
 
         output = net(data, coord)
         loss_output = loss(output, target)
@@ -60,7 +60,7 @@ def train(data_loader, net, loss, epoch, optimizer, get_lr, save_dir):
         loss_output[0].backward()
         optimizer.step()
 
-        loss_output[0] = loss_output[0].item()
+        # loss_output[0] = loss_output[0].item()
         metrics.append(loss_output)
 
     end_time = time.time()
@@ -104,14 +104,14 @@ def validate(data_loader, net, loss):
             target = Variable(target)
             coord = Variable(coord)
             if use_gpu:
-                data = data.cuda(async=True)
-                target = target.cuda(async=True)
-                coord = coord.cuda(async=True)
+                data = data.cuda(non_blocking=True)
+                target = target.cuda(non_blocking=True)
+                coord = coord.cuda(non_blocking=True)
 
             output = net(data, coord)
             loss_output = loss(output, target, train=False)
 
-            loss_output[0] = loss_output[0].item()
+            # loss_output[0] = loss_output[0].item()
             metrics.append(loss_output)
     end_time = time.time()
 
@@ -257,6 +257,7 @@ def SPNNetTrain(context):
     getlr = functools.partial(getLearningRate, epochs=epochs, lr=learningRate)
 
     for epoch in range(startEpoch, epochs + 1):
+        trainSampler.set_epoch(epoch)
         train(trainLoader, net, loss, epoch, optimizer, getlr, saveFolder)
         validate(valLoader, net, loss)
 
