@@ -257,7 +257,8 @@ def SPNNetTrain(context):
     getlr = functools.partial(getLearningRate, epochs=epochs, lr=learningRate)
 
     for epoch in range(startEpoch, epochs + 1):
-        trainSampler.set_epoch(epoch)
+        if trainSampler is not None:
+            trainSampler.set_epoch(epoch)
         train(trainLoader, net, loss, epoch, optimizer, getlr, saveFolder)
         validate(valLoader, net, loss)
 
