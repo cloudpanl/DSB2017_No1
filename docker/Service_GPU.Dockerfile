@@ -15,6 +15,10 @@ RUN pip install suanpan[service] pydicom scipy h5py scikit-image simpleitk matpl
 
 WORKDIR /home/DSB3
 
-COPY . /home/DSB3
+RUN mkdir -p /home/DSB3
+
+COPY dsb /home/DSB3/dsb
+
+COPY service_* /home/DSB3/
 
 CMD [ "bash" ]

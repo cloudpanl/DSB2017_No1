@@ -11,6 +11,10 @@ RUN pip install torch torchvision pydicom scipy h5py scikit-image imageio simple
 
 WORKDIR /home/DSB3
 
-COPY . /home/DSB3
+RUN mkdir -p /home/DSB3
+
+COPY dsb /home/DSB3/dsb
+
+COPY service_* /home/DSB3/
 
 CMD [ "bash" ]

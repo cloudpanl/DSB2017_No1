@@ -23,6 +23,10 @@ RUN pip install suanpan[docker] pydicom scipy h5py scikit-image simpleitk matplo
 
 WORKDIR /home/DSB3
 
-COPY . /home/DSB3
+RUN mkdir -p /home/DSB3
+
+COPY dsb /home/DSB3/dsb
+
+COPY component_* /home/DSB3/
 
 CMD [ "bash" ]
