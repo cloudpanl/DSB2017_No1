@@ -19,7 +19,8 @@ imageio = "*"
 simpleitk = "*"
 pyhive = {extras = ["hive"], version = "*"}
 "oss2" = "*"
-suanpan = {path = "./../AiLab"}
+suanpan = {extras = ["docker"], version = "*"}
+horovod = "*"
 
 [dev-packages]
 pylint = "*"

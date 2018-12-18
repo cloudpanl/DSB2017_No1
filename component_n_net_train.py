@@ -23,6 +23,8 @@ from suanpan.arguments import Float, Int, String, Bool
 from suanpan.docker import DockerComponent as dc
 from suanpan.docker.arguments import Checkpoint, Folder, HiveTable
 
+import horovod.torch as hvd
+
 
 def getLearningRate(epoch, epochs, lr):
     if epoch <= epochs * 0.5:
@@ -175,10 +177,7 @@ def save(path, net, **kwargs):
 @dc.param(Float(key="learningRate", default=0.01))
 @dc.param(Float(key="momentum", default=0.9))
 @dc.param(Float(key="weightDecay", default=1e-4))
-@dc.param(Int(key="worldSize", default=1))
-@dc.param(String(key="distBackend", default="nccl"))
-@dc.param(String(key="distUrl", default="env://"))
-@dc.param(Int(key="distRank", default=1))
+@dc.param(Bool(key="distributed", default=False))
 def SPNNetTrain(context):
     torch.manual_seed(0)
 
@@ -196,15 +195,11 @@ def SPNNetTrain(context):
     momentum = args.momentum
     weightDecay = args.weightDecay
     useGpu = torch.cuda.is_available()
-    distributed = args.worldSize > 1
+    distributed = args.distributed and useGpu
 
     if distributed:
-        torch.distributed.init_process_group(
-            backend=args.distBackend,
-            init_method=args.distUrl,
-            world_size=args.worldSize,
-            rank=args.distRank,
-        )
+        hvd.init()
+        torch.cuda.set_device(hvd.local_rank())
 
     config, net, loss, getPbb = model.get_model()
 
@@ -225,10 +220,15 @@ def SPNNetTrain(context):
         print("Use CPU for training.")
         net = net.cpu()
 
+    if distributed:
+        print("Distributed training.")
+
     # Train sets
     trainDataset = data.DataBowl3Detector(dataFolder, trainIds, config, phase="train")
     trainSampler = (
-        torch.utils.data.distributed.DistributedSampler(trainDataset)
+        torch.utils.data.distributed.DistributedSampler(
+            trainDataset, num_replicas=hvd.size(), rank=hvd.rank()
+        )
         if distributed
         else None
     )
@@ -254,11 +254,15 @@ def SPNNetTrain(context):
         net.parameters(), learningRate, momentum=momentum, weight_decay=weightDecay
     )
 
+    if distributed:
+        optimizer = hvd.DistributedOptimizer(
+            optimizer, named_parameters=net.named_parameters()
+        )
+        hvd.broadcast_parameters(net.state_dict(), root_rank=0)
+
     getlr = functools.partial(getLearningRate, epochs=epochs, lr=learningRate)
 
     for epoch in range(startEpoch, epochs + 1):
-        if trainSampler is not None:
-            trainSampler.set_epoch(epoch)
         train(trainLoader, net, loss, epoch, optimizer, getlr, saveFolder)
         validate(valLoader, net, loss)
 
