@@ -10,7 +10,7 @@ from skimage import measure, morphology
 
 
 def load_scan(path):
-    slices = [dicom.read_file(path + '/' + s) for s in os.listdir(path)]
+    slices = [dicom.dcmread(path + '/' + s) for s in os.listdir(path)]
     slices.sort(key = lambda x: float(x.ImagePositionPatient[2]))
     if slices[0].ImagePositionPatient[2] == slices[1].ImagePositionPatient[2]:
         sec_num = 2;
