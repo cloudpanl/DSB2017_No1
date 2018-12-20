@@ -53,9 +53,15 @@ python component_folder_combine.py \
 --inputFolder2 "majik_test/component_luna_preprocess_output_data" \
 --outputFolder "majik_test/component_folder_combine_output_data"
 
-docker run --ipc=host --runtime=nvidia \
--v test:/var/nfs/general \
+
+docker run \
+--runtime=nvidia \
+--network=host \
+--ipc=host \
+-e CUDA_VISIBLE_DEVICES=1,2 \
+-v kaggle:/sp_data \
 registry.cn-shanghai.aliyuncs.com/shuzhi/kaggle_no1_component:GPU \
+mpirun -np 2 -H localhost:2 \
 python component_n_net_train.py \
 --dw-type "hive" \
 --dw-hive-host "47.94.82.175" \
@@ -65,16 +71,49 @@ python component_n_net_train.py \
 --storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
 --storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
 --storage-oss-bucket-name 'suanpan' \
---storage-oss-temp-store 'tmp' \
---inputTrainDataTable "component_dsb3_preprocess_output_table" \
---inputValidateDataTable "component_luna_preprocess_output_data" \
---inputDataFolder "majik_test/component_folder_combine_output_data" \
+--storage-oss-temp-store '/sp_data' \
+--inputTrainDataTable "AIStudio_temp_648_9b73f710edfc11e89b0b8b30232e5b99_out1" \
+--inputValidateDataTable "AIStudio_temp_648_9b73f710edfc11e89b0b8b30232e5b99_out2" \
+--inputDataFolder "studio/shanglu/648/b78817f0efec11e88cdf854bf5061962/out1/data" \
 --outputCheckpoint "majik_test/component_n_net_train_output_checkpoint" \
 --idColumn "patient" \
---worldSize "2" \
---distBackend "nccl" \
---distUrl "file:///var/nfs/general/trainfile" \
---distRank "1"
+--batchSize "4"
+
+-e CUDA_VISIBLE_DEVICES=1,2 \
+
+docker run \
+--runtime=nvidia \
+--network=host \
+--ipc=host \
+-v kaggle:/sp_data \
+registry.cn-shanghai.aliyuncs.com/shuzhi/kaggle_no1_component:GPU \
+mpirun -np 2 -H 172.26.152.220:1,172.26.152.219:1 \
+-mca plm_rsh_args "-p 8880" \
+python component_n_net_train.py \
+--dw-type "hive" \
+--dw-hive-host "47.94.82.175" \
+--dw-hive-port "10000" \
+--dw-hive-username "spark" \
+--storage-type 'oss' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-temp-store '/sp_data' \
+--inputTrainDataTable "AIStudio_temp_648_9b73f710edfc11e89b0b8b30232e5b99_out1" \
+--inputValidateDataTable "AIStudio_temp_648_9b73f710edfc11e89b0b8b30232e5b99_out2" \
+--inputDataFolder "studio/shanglu/648/b78817f0efec11e88cdf854bf5061962/out1/data" \
+--outputCheckpoint "majik_test/component_n_net_train_output_checkpoint" \
+--idColumn "patient" \
+--batchSize "4"
+
+docker run \
+--runtime=nvidia \
+--network=host \
+--ipc=host \
+-v kaggle:/sp_data \
+registry.cn-shanghai.aliyuncs.com/shuzhi/kaggle_no1_component:GPU \
+bash -c "/usr/sbin/sshd -p 8880; sleep infinity"
+
 
 docker run --rm registry.cn-shanghai.aliyuncs.com/shuzhi/dsb3_no1 \
 python component_n_net_predict.py \
