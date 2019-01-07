@@ -11,7 +11,8 @@ from skimage import measure, morphology
 
 def load_scan(path):
     slices = [dicom.read_file(path + '/' + s) for s in os.listdir(path)]
-    slices.sort(key = lambda x: float(x.ImagePositionPatient[2]))
+    # slices.sort(key = lambda x: float(x.ImagePositionPatient[2]))
+    slices.sort(key = lambda x:float(x.InstanceNumber))
     if slices[0].ImagePositionPatient[2] == slices[1].ImagePositionPatient[2]:
         sec_num = 2;
         while slices[0].ImagePositionPatient[2] == slices[sec_num].ImagePositionPatient[2]:
@@ -19,7 +20,7 @@ def load_scan(path):
         slice_num = int(len(slices) / sec_num)
         slices.sort(key = lambda x:float(x.InstanceNumber))
         slices = slices[0:slice_num]
-        slices.sort(key = lambda x:float(x.ImagePositionPatient[2]))
+        # slices.sort(key = lambda x:float(x.ImagePositionPatient[2]))
     try:
         slice_thickness = np.abs(slices[0].ImagePositionPatient[2] - slices[1].ImagePositionPatient[2])
     except:
@@ -56,7 +57,7 @@ def get_pixels_hu(slices):
 
         image[slice_number] += np.int16(intercept)
 
-    return np.array(image, dtype=np.int16), np.array([float(slices[0].SliceThickness)] + list(slices[0].PixelSpacing), dtype=np.float32)
+    return np.array(image, dtype=np.int16), np.array([slices[0].SliceThickness] + slices[0].PixelSpacing, dtype=np.float32)
 
 def binarize_per_slice(image, spacing, intensity_th=-600, sigma=1, area_th=30, eccen_th=0.99, bg_patch_size=10):
     bw = np.zeros(image.shape, dtype=bool)
@@ -256,9 +257,9 @@ if __name__ == '__main__':
     patients = os.listdir(INPUT_FOLDER)
     patients.sort()
     case_pixels, m1, m2, spacing = step1_python(os.path.join(INPUT_FOLDER,patients[25]))
-    # plt.imshow(m1[60])
-    # plt.figure()
-    # plt.imshow(m2[60])
+    plt.imshow(m1[60])
+    plt.figure()
+    plt.imshow(m2[60])
 #     first_patient = load_scan(INPUT_FOLDER + patients[25])
 #     first_patient_pixels, spacing = get_pixels_hu(first_patient)
 #     plt.hist(first_patient_pixels.flatten(), bins=80, color='c')

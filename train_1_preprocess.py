@@ -502,7 +502,9 @@ if __name__=='__main__':
     args = parser.parse_args()
 
     # pre-process stage1
-    full_prep(args.preprocess_result_path, args.stage1_data_path, args.stage1_annos_path, workers=args.workers, force=args.force)
+    if os.path.isdir(args.stage1_data_path):
+        full_prep(args.preprocess_result_path, args.stage1_data_path, args.stage1_annos_path, workers=args.workers, force=args.force)
     # pre-process luna
-    prepare_luna(args.luna_raw, args.luna_abbr, args.luna_data, args.luna_segment, force=args.force)
-    preprocess_luna(args.luna_segment, args.preprocess_result_path, args.luna_data, args.luna_label, args.workers, force=args.force)
+    if os.path.isdir(args.luna_raw):
+        prepare_luna(args.luna_raw, args.luna_abbr, args.luna_data, args.luna_segment, force=args.force)
+        preprocess_luna(args.luna_segment, args.preprocess_result_path, args.luna_data, args.luna_label, args.workers, force=args.force)
