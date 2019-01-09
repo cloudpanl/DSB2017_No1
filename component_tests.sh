@@ -215,3 +215,54 @@ python component_data_to_mask_images.py \
 --outputImagesFolder "majik_test/component_data_to_mask_images_output_images_predict" \
 --idColumn "patient" \
 --dataColumn "image_path"
+
+###############################
+
+docker run -d -v kaggle:/sp_data registry.cn-shanghai.aliyuncs.com/shuzhi/kaggle_no1_component:CPU \
+python /home/DSB3/component_dsb3_preprocess.py \
+--inputDataFolder 'studio/shanglu/majik_test/wly/data' \
+--inputLabelsFolder 'studio/shanglu/majik_test/wly/annos' \
+--outputDataTable 'wly_preprocess_data' \
+--outputDataFolder 'studio/shanglu/majik_test/wly/preprocess' \
+--storage-type 'oss' \
+--storage-oss-endpoint 'http://oss-cn-beijing.aliyuncs.com' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-temp-store '/sp_data' \
+--dw-type 'hive' \
+--dw-hive-host '47.94.82.175' \
+--dw-hive-port '10000' \
+--dw-hive-database 'default' \
+--dw-hive-auth '' \
+--dw-hive-username '' \
+--dw-hive-password ''
+
+docker run \
+--runtime=nvidia \
+--network=host \
+--ipc=host \
+-e CUDA_VISIBLE_DEVICES=0,1 \
+-v kaggle:/sp_data \
+registry.cn-shanghai.aliyuncs.com/shuzhi/kaggle_no1_component:GPU \
+mpirun -np 2 -H localhost:2 \
+python component_n_net_train.py \
+--storage-type 'oss' \
+--storage-oss-endpoint 'http://oss-cn-beijing.aliyuncs.com' \
+--storage-oss-bucket-name 'suanpan' \
+--storage-oss-access-id 'LTAIgV6cMz4TgHZB' \
+--storage-oss-access-key 'M6jP8a1KN2kfZR51M08UiEufnzQuiY' \
+--storage-oss-temp-store '/sp_data' \
+--dw-type 'hive' \
+--dw-hive-host '47.94.82.175' \
+--dw-hive-port '10000' \
+--dw-hive-database 'default' \
+--dw-hive-auth '' \
+--dw-hive-username '' \
+--dw-hive-password '' \
+--inputTrainDataTable "AIStudio_temp_648_d2e3cdb012eb11e9a1c7016968e21658_out1" \
+--inputValidateDataTable "AIStudio_temp_648_d2e3cdb012eb11e9a1c7016968e21658_out2" \
+--inputDataFolder "studio/shanglu/majik_test/wly/preprocess" \
+--outputCheckpoint "studio/shanglu/majik_test/wly/component_n_net_train_output_checkpoint" \
+--idColumn "patient" \
+--batchSize "16"

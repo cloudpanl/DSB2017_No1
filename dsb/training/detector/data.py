@@ -228,6 +228,8 @@ class Crop(object):
             max(start[1],0):min(start[1] + crop_size[1],imgs.shape[2]),
             max(start[2],0):min(start[2] + crop_size[2],imgs.shape[3])]
         crop = np.pad(crop,pad,'constant',constant_values =self.pad_value)
+        if crop.shape[-1] > crop.shape[1]:
+            crop = crop[:, :, :, :crop.shape[1]]
         for i in range(3):
             target[i] = target[i] - start[i]
         for i in range(len(bboxes)):
