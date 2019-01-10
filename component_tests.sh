@@ -240,12 +240,11 @@ python /home/DSB3/component_dsb3_preprocess.py \
 
 docker run \
 --runtime=nvidia \
---network=host \
 --ipc=host \
--e CUDA_VISIBLE_DEVICES=0,1 \
+-e CUDA_VISIBLE_DEVICES=0,1,2,3 \
 -v kaggle:/sp_data \
 registry.cn-shanghai.aliyuncs.com/shuzhi/kaggle_no1_component:GPU \
-mpirun -np 2 -H localhost:2 \
+mpirun -np 4 -H localhost:4 \
 python component_n_net_train.py \
 --storage-type 'oss' \
 --storage-oss-endpoint 'http://oss-cn-beijing.aliyuncs.com' \
@@ -260,9 +259,9 @@ python component_n_net_train.py \
 --dw-hive-auth '' \
 --dw-hive-username '' \
 --dw-hive-password '' \
---inputTrainDataTable "AIStudio_temp_648_d2e3cdb012eb11e9a1c7016968e21658_out1" \
---inputValidateDataTable "AIStudio_temp_648_d2e3cdb012eb11e9a1c7016968e21658_out2" \
---inputDataFolder "studio/shanglu/majik_test/wly/preprocess" \
+--inputTrainDataTable "AIStudio_temp_648_c80edda0131111e9a9075b5b430fcf9b_out1" \
+--inputValidateDataTable "AIStudio_temp_648_c80edda0131111e9a9075b5b430fcf9b_out2" \
+--inputDataFolder "studio/shanglu/648/5c590360131111e9a9075b5b430fcf9b/out2/data" \
 --outputCheckpoint "studio/shanglu/majik_test/wly/component_n_net_train_output_checkpoint" \
 --idColumn "patient" \
---batchSize "16"
+--batchSize "8"

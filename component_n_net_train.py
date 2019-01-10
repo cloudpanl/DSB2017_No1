@@ -202,6 +202,7 @@ def SPNNetTrain(context):
         torch.cuda.set_device(hvd.local_rank())
 
     config, net, loss, getPbb = model.get_model()
+    config['sizelim'] = 3
 
     if checkoutPointPath:
         checkpoint = torch.load(checkoutPointPath)
