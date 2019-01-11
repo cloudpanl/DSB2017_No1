@@ -76,9 +76,9 @@ def train(
         # loss_output[0] = loss_output[0].item()
         metrics.append(loss_output)
 
-        if epoch % save_freq == 0:
-            ckptPath = os.path.join(save_dir, "%03d.ckpt" % epoch)
-            save(ckptPath, net, epoch=epoch)
+    if epoch % save_freq == 0:
+        ckptPath = os.path.join(save_dir, "%03d.ckpt" % epoch)
+        save(ckptPath, net, epoch=epoch)
 
     end_time = time.time()
 
