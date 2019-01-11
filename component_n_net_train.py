@@ -35,7 +35,18 @@ def getLearningRate(epoch, epochs, lr):
         return 0.01 * lr
 
 
-def train(data_loader, net, loss, epoch, optimizer, get_lr, save_dir):
+def train(
+    data_loader,
+    net,
+    loss,
+    epoch,
+    optimizer,
+    get_lr,
+    save_dir,
+    ckpt_dir=None,
+    save_freq=1,
+):
+    ckpt_dir = ckpt_dir or save_dir
     # Check if the net use GPU.
     use_gpu = next(net.parameters()).is_cuda
     start_time = time.time()
@@ -64,6 +75,19 @@ def train(data_loader, net, loss, epoch, optimizer, get_lr, save_dir):
 
         # loss_output[0] = loss_output[0].item()
         metrics.append(loss_output)
+
+        if epoch % save_freq == 0:
+            if isinstance(net, DataParallel):
+                state_dict = net.module.state_dict()
+            else:
+                state_dict = net.state_dict()
+            for key in state_dict.keys():
+                state_dict[key] = state_dict[key].cpu()
+
+            torch.save(
+                {"epoch": epoch, "ckpt_dir": ckpt_dir, "state_dict": state_dict},
+                os.path.join(save_dir, "%03d.ckpt" % epoch),
+            )
 
     end_time = time.time()
 
@@ -178,6 +202,8 @@ def save(path, net, **kwargs):
 @dc.param(Float(key="momentum", default=0.9))
 @dc.param(Float(key="weightDecay", default=1e-4))
 @dc.param(Bool(key="distributed", default=False))
+@dc.param(String(key="ckptFolder"))
+@dc.param(Bool(key="saveFreq", default=1))
 def SPNNetTrain(context):
     torch.manual_seed(0)
 
@@ -197,12 +223,15 @@ def SPNNetTrain(context):
     useGpu = torch.cuda.is_available()
     distributed = args.distributed and useGpu
 
+    ckptFolder = args.ckptFolder
+    saveFreq = args.saveFreq
+
     if distributed:
         hvd.init()
         torch.cuda.set_device(hvd.local_rank())
 
     config, net, loss, getPbb = model.get_model()
-    config['sizelim'] = 3
+    config["sizelim"] = 3
 
     if checkoutPointPath:
         checkpoint = torch.load(checkoutPointPath)
@@ -264,7 +293,17 @@ def SPNNetTrain(context):
     getlr = functools.partial(getLearningRate, epochs=epochs, lr=learningRate)
 
     for epoch in range(startEpoch, epochs + 1):
-        train(trainLoader, net, loss, epoch, optimizer, getlr, saveFolder)
+        train(
+            trainLoader,
+            net,
+            loss,
+            epoch,
+            optimizer,
+            getlr,
+            saveFolder,
+            ckpt_dir=ckptFolder,
+            save_freq=saveFreq,
+        )
         validate(valLoader, net, loss)
 
     ckptPath = os.path.join(saveFolder, "model.ckpt")

@@ -180,9 +180,11 @@ class Crop(object):
         self.bound_size = config['bound_size']
         self.stride = config['stride']
         self.pad_value = config['pad_value']
+        self.sizelim = float(config.get("sizelim", 8))
+
     def __call__(self, imgs, target, bboxes,isScale=False,isRand=False):
         if isScale:
-            radiusLim = [8.,120.]
+            radiusLim = [self.sizelim, 120.]
             scaleLim = [0.75,1.25]
             scaleRange = [np.min([np.max([(radiusLim[0]/target[3]),scaleLim[0]]),1])
                          ,np.max([np.min([(radiusLim[1]/target[3]),scaleLim[1]]),1])]
