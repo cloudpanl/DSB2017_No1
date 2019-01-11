@@ -77,17 +77,8 @@ def train(
         metrics.append(loss_output)
 
         if epoch % save_freq == 0:
-            if isinstance(net, DataParallel):
-                state_dict = net.module.state_dict()
-            else:
-                state_dict = net.state_dict()
-            for key in state_dict.keys():
-                state_dict[key] = state_dict[key].cpu()
-
-            torch.save(
-                {"epoch": epoch, "ckpt_dir": ckpt_dir, "state_dict": state_dict},
-                os.path.join(save_dir, "%03d.ckpt" % epoch),
-            )
+            ckptPath = os.path.join(save_dir, "%03d.ckpt" % epoch)
+            save(ckptPath, net, epoch=epoch)
 
     end_time = time.time()
 
